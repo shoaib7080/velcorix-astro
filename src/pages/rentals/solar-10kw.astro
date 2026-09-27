@@ -1,0 +1,65 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "10kW Solar Power Kit - Velcorix Rentals",
+  metaDesc: "Robust renewable energy for camps and industrial sites in UAE. Velcorix provides 10kW solar power kits for off-grid operations.",
+  header: {
+    title: "10kW Solar Power Kit",
+    subtitle: "Robust renewable energy for camps and industrial sites",
+    bgImage: "/assets/images/rentals/solar-2.jpg"
+  },
+  intro: {
+    image: "/assets/images/rentals/solar10kw-2.webp",
+    imageAlt: "10kW Solar Kit",
+    heading: "High Capacity Solar Solution"
+  },
+  offerings: [
+    { title: "Extended Array", desc: "Larger PV array for higher energy yield", icon: "fas fa-circle" },
+    { title: "Advanced Inverter", desc: "Intelligent load management and monitoring", icon: "fas fa-circle" },
+    { title: "High Capacity Storage", desc: "Large battery bank for extended autonomy", icon: "fas fa-circle" },
+    { title: "Hybrid Capability", desc: "Seamless integration with diesel generators", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Accommodation", desc: "Powering staff quarters and amenities.", icon: "fas fa-bed" },
+    { title: "Large Offices", desc: "Supporting multiple workstations and cooling.", icon: "fas fa-building" },
+    { title: "Water Pumps", desc: "Running agriculture or dewatering pumps.", icon: "fas fa-tint" },
+    { title: "Workshops", desc: "Powering lights and small tools in remote workshops.", icon: "fas fa-warehouse" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/solar10kw-2.webp",
+    items: [
+      { key: "System Capacity", value: "10 kWp" },
+      { key: "Daily Generation", value: "~ 40 - 50 kWh (avg)" },
+      { key: "Inverter Rating", value: "10 kVA Hybrid (1-Phase / 3-Phase)" },
+      { key: "Battery Bank", value: "48V / 96V / High Voltage Options" },
+      { key: "Backup Time", value: "Scalable based on load profile" }
+    ]
+  },
+  compliance: [
+    { title: "Sustainability", desc: "Contributes to LEED certification and carbon reduction goals.", icon: "fas fa-leaf" },
+    { title: "Maintenance", desc: "Routine panel cleaning and system checks included.", icon: "fas fa-tools" },
+    { title: "Integration", desc: "Can be integrated with existing gensets for fuel saving hybrid mode.", icon: "fas fa-network-wired" },
+    { title: "Support", desc: "24/7 technical support for system troubleshooting.", icon: "fas fa-headset" }
+  ],
+  cta: {
+    heading: "Power Your Project Sustainably",
+    subtext: "Rent a 10kW Solar Power Kit for reliable, green energy.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    The Velcorix 10kW Solar Power Kit is designed to meet the demands of larger 
+    off-grid installations, such as construction camps, field offices, and 
+    industrial workstations. It offers significant fuel savings by reducing 
+    generator run-time.
+  </p>
+  <p>
+    Scalable and robust, this system ensures a continuous power supply 
+    even in harsh environments. We provide complete installation and 
+    maintenance support, making the switch to solar effortless.
+  </p>
+</RentalDetailLayout>

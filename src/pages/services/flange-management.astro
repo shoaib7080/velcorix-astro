@@ -1,0 +1,312 @@
+---
+import PageHeader from '../../components/PageHeader.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Flange Management - Velcorix Services" description="Comprehensive flange management services in UAE. Velcorix ensures leak-free operations with expert bolt torquing, tensioning, machining, and engineering support.">
+<!-- Header (Hero) -->
+    <PageHeader 
+      title="Flange Management" 
+      subtitle="Complete Joint Integrity Solutions" 
+      bgImage="/assets/images/services/DSC_2407.JPG" 
+    />
+
+    <!-- Overview (Intro) -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <img
+              src="/assets/images/services/DSC_2408.JPG"
+              class="img-fluid shadow intro-image"
+              alt="Flange Management Overview"
+              onerror="this.src='https://placehold.co/800x400?text=Flange+Management'"
+            />
+          </div>
+          <div class="col-lg-6 mb-4">
+            <h2 class="mb-3">Ensuring Leak-Free Operations</h2>
+            <p>
+              Flange management is the cornerstone of mechanical joint
+              integrity. At Velcorix, we offer a comprehensive suite of services
+              designed to ensure that every bolted connection on your site is
+              leak-free and compliant with international standards.
+            </p>
+            <p>
+              Our integrated approach combines field services like torquing and
+              machining with robust engineering management, including tagging,
+              tracking, and certification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sub-Service Menu (Card Grid) - Styled like Rentals.html -->
+    <section class="section-padding bg-light">
+      <div class="container">
+        <div class="section-title text-center mb-5">
+          <h2>Our Flange Management Services</h2>
+          <p>
+            Explore our specialized range of bolting and machining solutions.
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Card 1: Bolt Torquing -->
+          <div class="col-md-6 col-lg-3">
+            <a href="/services/bolt-torquing" class="text-decoration-none text-dark">
+              <div
+                class="service-card text-center h-100 bg-white p-4 rounded shadow-sm border-0 transition-hover"
+              >
+                <div class="service-icon mb-3">
+                  <i class="fas fa-wrench fa-3x text-primary"></i>
+                </div>
+                <h3 class="h5 fw-bold">Bolt Torquing</h3>
+                <p class="text-muted small">
+                  Precision hydraulic tightening for critical mains and
+                  structural joints.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 2: Bolt Tensioning -->
+          <div class="col-md-6 col-lg-3">
+            <a
+              href="/services/bolt-tensioning"
+              class="text-decoration-none text-dark"
+            >
+              <div
+                class="service-card text-center h-100 bg-white p-4 rounded shadow-sm border-0 transition-hover"
+              >
+                <div class="service-icon mb-3">
+                  <i class="fas fa-compress-arrows-alt fa-3x text-primary"></i>
+                </div>
+                <h3 class="h5 fw-bold">Bolt Tensioning</h3>
+                <p class="text-muted small">
+                  Accurate axial loading for high-pressure and large diameter
+                  bolts.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 3: Flange Machining -->
+          <div class="col-md-6 col-lg-3">
+            <a
+              href="/services/flange-machining"
+              class="text-decoration-none text-dark"
+            >
+              <div
+                class="service-card text-center h-100 bg-white p-4 rounded shadow-sm border-0 transition-hover"
+              >
+                <div class="service-icon mb-3">
+                  <i class="fas fa-compact-disc fa-3x text-primary"></i>
+                </div>
+                <h3 class="h5 fw-bold">Flange Machining</h3>
+                <p class="text-muted small">
+                  On-site facing and restoration of damaged sealing surfaces.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- Card 4: Management & Support -->
+          <div class="col-md-6 col-lg-3">
+            <a
+              href="/services/flange-support"
+              class="text-decoration-none text-dark"
+            >
+              <div
+                class="service-card text-center h-100 bg-white p-4 rounded shadow-sm border-0 transition-hover"
+              >
+                <div class="service-icon mb-3">
+                  <i class="fas fa-tasks fa-3x text-primary"></i>
+                </div>
+                <h3 class="h5 fw-bold">Management & Support</h3>
+                <p class="text-muted small">
+                  Tagging, database management, and engineering technical
+                  support.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Typical Applications -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Typical Real-World Applications</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="fas fa-industry"></i>
+              </div>
+              <h4>Refinery Turnarounds</h4>
+              <p class="small text-muted mb-0">
+                Large-scale unbolting and rebolting during shutdowns.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="fas fa-oil-can"></i>
+              </div>
+              <h4>Pipeline Construction</h4>
+              <p class="small text-muted mb-0">
+                Flange assembly for new oil and gas pipelines.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="fas fa-ship"></i>
+              </div>
+              <h4>Offshore Platforms</h4>
+              <p class="small text-muted mb-0">
+                Maintenance of critical high-pressure topside joints.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="service-card text-center h-100">
+              <div class="service-icon">
+                <i class="fas fa-wind"></i>
+              </div>
+              <h4>Power Stations</h4>
+              <p class="small text-muted mb-0">
+                Steam turbine casing and valve maintenance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capability Details (How We Do It) -->
+    <section class="section-padding bg-light">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="mb-4 fw-bold">Why Choose Velcorix?</h2>
+            <div class="bg-white p-4 rounded shadow-sm">
+              <p class="text-muted">
+                We deliver assurance. Our flange management system is designed
+                to give you complete visibility and confidence in your plant's
+                integrity.
+              </p>
+              <ul class="list-unstyled">
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 me-3"></i>
+                  <div>
+                    <strong>Certified Technicians:</strong> All personnel are
+                    trained to ECITB MJI10/19 standards.
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 me-3"></i>
+                  <div>
+                    <strong>Tool Availability:</strong> Largest inventory of
+                    hydraulic torque and tensioning tools in the region.
+                  </div>
+                </li>
+                <li class="mb-3 d-flex align-items-start">
+                  <i class="fas fa-check-circle text-primary mt-1 me-3"></i>
+                  <div>
+                    <strong>Digital Reports:</strong> Instant generation of
+                    joint completion certificates for faster QA/QC sign-off.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="/assets/images/services/DSC_2414.JPG"
+              alt="Velcorix Capabilities"
+              class="img-fluid rounded shadow w-100"
+              onerror="this.src='https://placehold.co/600x400?text=Why+Choose+Us'"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance & Support -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="section-title">
+          <h2>Compliance Standards</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-3">
+            <div
+              class="bg-white p-3 rounded shadow-sm h-100 text-center border"
+            >
+              <i class="fas fa-scroll text-primary mb-3 fa-2x"></i>
+              <h6 class="fw-bold">ASME PCC-1</h6>
+              <p class="small text-muted mb-0">
+                Follows Guidelines for Pressure Boundary Bolted Flange Joint
+                Assembly.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="bg-white p-3 rounded shadow-sm h-100 text-center border"
+            >
+              <i class="fas fa-user-graduate text-primary mb-3 fa-2x"></i>
+              <h6 class="fw-bold">ISO 9001</h6>
+              <p class="small text-muted mb-0">
+                Quality management systems ensuring consistent service delivery.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="bg-white p-3 rounded shadow-sm h-100 text-center border"
+            >
+              <i class="fas fa-clipboard-check text-primary mb-3 fa-2x"></i>
+              <h6 class="fw-bold">API Standards</h6>
+              <p class="small text-muted mb-0">
+                Compliance with relevant API codes for oilfield equipment.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div
+              class="bg-white p-3 rounded shadow-sm h-100 text-center border"
+            >
+              <i class="fas fa-hard-hat text-primary mb-3 fa-2x"></i>
+              <h6 class="fw-bold">HSE Focused</h6>
+              <p class="small text-muted mb-0">
+                Zero accident philosophy in all high-pressure operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section text-center text-white">
+      <div class="container">
+        <h2 class="cta-heading">Ready for Zero Gratuity?</h2>
+        <p class="cta-subtext">
+          Achieve leak-free start-ups with Velcorix's expert flange management.
+        </p>
+        <a href="/contact" class="btn btn-primary btn-lg mt-3"
+          >Contact Us Today</a
+        >
+      </div>
+      <div class="footer-divider"></div>
+    </section>
+
+    <!-- Footer -->
+</BaseLayout>
+

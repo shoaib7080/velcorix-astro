@@ -1,0 +1,63 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "H120 Fire Rated Doors & Windows - Velcorix Trading",
+  metaDesc: "Certified H120 hydrocarbon fire-rated doors, blast-resistant doors, vision panels, and watertight doors across the UAE.",
+  header: {
+    title: "H120 Fire Rated Doors & Windows",
+    subtitle: "DNV & ABS Certified H120 Marine Fire Doors & Windows",
+    bgImage: "/assets/images/trading/h120.png"
+  },
+  intro: {
+    image: "/assets/images/trading/h120.png",
+    imageAlt: "H120 Fire Rated Doors & Windows",
+    heading: "Hydrocarbon Fire & Blast Protection Barriers"
+  },
+  products: [
+    { name: "H120 Fire Rated & Blast Doors", image: "/assets/images/products/H120/door.jpeg", desc: "Certified 120-minute hydrocarbon fire and blast resistant heavy steel doors." },
+    { name: "H120 Fire Windows & Vision Panels", image: "/assets/images/products/H120/window.jpg", desc: "Fire-rated vision panels and windows with specialized ceramic fire glass." }
+  ],
+  offerings: [
+    { title: "H120 Hydrocarbon Doors", desc: "Single & double leaf doors rated for 120 minutes of hydrocarbon fire.", icon: "fas fa-circle" },
+    { title: "Blast-Resistant Doors", desc: "Heavy steel doors engineered to withstand high peak blast overpressures.", icon: "fas fa-circle" },
+    { title: "H120 Fire Windows", desc: "Certified vision panels with multi-layer ceramic fire-rated glass.", icon: "fas fa-circle" },
+    { title: "Marine Watertight Doors", desc: "Combined H120 fire rating with high water pressure resistance.", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Offshore Platforms", desc: "Living quarters and control room fire containment walls.", icon: "fas fa-ship" },
+    { title: "Refineries & Petrochemical", desc: "Process building protection against hydrocarbon pool fires.", icon: "fas fa-industry" },
+    { title: "Subsea Facilities", desc: "Watertight and fireproof barrier bulkheads.", icon: "fas fa-water" },
+    { title: "Hazardous Storage", desc: "Chemical and fuel storage room safety enclosures.", icon: "fas fa-drum" }
+  ],
+  specifications: {
+    image: "/assets/images/trading/h120.png",
+    items: [
+      { key: "Fire Rating", value: "H120 / H60 Hydrocarbon Fire Curve (EN 1363-2 / IMO FTP Code)" },
+      { key: "Blast Rating", value: "Overpressure resistance up to 2.5 Bar" },
+      { key: "Construction", value: "Heavy 316L Stainless Steel or Coated Carbon Steel frame" },
+      { key: "Hardware", value: "Heavy-duty 3-point latching, panic bars, door closers, and seals" }
+    ]
+  },
+  compliance: [
+    { title: "DNV / ABS Approved", desc: "Full marine type approval certificates.", icon: "fas fa-certificate" },
+    { title: "Rigorously Tested", desc: "Fire and blast tested at accredited international test centers.", icon: "fas fa-shield-alt" },
+    { title: "Custom Fabrication", desc: "Custom door sizes, vision panels, and transom heights built to spec.", icon: "fas fa-tools" },
+    { title: "Installation Guidance", desc: "Engineering drawings and site erection support provided.", icon: "fas fa-truck" }
+  ],
+  cta: {
+    heading: "Protect Facilities with H120 Barriers",
+    subtext: "Contact us for custom H120 fire door and window specifications, approval drawings, and quotes.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix is a trusted UAE supplier of certified H120 hydrocarbon fire-rated doors, blast-resistant barrier doors, fire windows, and vision panels engineered for high-risk offshore platforms, refineries, and petrochemical processing facilities.
+  </p>
+  <p>
+    Designed to endure severe thermal stress and withstand intense 120-minute hydrocarbon pool fires (IMO FTP Code / EN 1363-2) along with peak blast pressures up to 2.5 Bar, our heavy-duty marine-grade SS316L and coated carbon steel door systems guarantee maximum structural integrity, flame containment, and life safety in hazardous environments.
+  </p>
+</RentalDetailLayout>

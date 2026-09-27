@@ -1,0 +1,64 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Cranes & Lifting - Velcorix Rentals",
+  metaDesc: "Safe and certified lifting solutions in UAE. Velcorix provides tower cranes, EOT cranes, and gantry cranes for rent.",
+  header: {
+    title: "Cranes & Lifting",
+    subtitle: "Safe and certified lifting solutions",
+    bgImage: "/assets/images/rentals/cranes-2.jpg"
+  },
+  intro: {
+    image: "/assets/images/rentals/cranes.webp",
+    imageAlt: "Cranes & Lifting",
+    heading: "Tower & EOT Cranes"
+  },
+  offerings: [
+    { title: "Tower Cranes", desc: "Self-erecting and hammerhead models for construction", icon: "fas fa-circle" },
+    { title: "EOT Cranes", desc: "Electric Overhead Traveling cranes for workshops", icon: "fas fa-circle" },
+    { title: "Gantry Cranes", desc: "Portable and rail-mounted gantry solutions", icon: "fas fa-circle" },
+    { title: "Rigging Services", desc: "Full range of certified lifting accessories and support", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Construction", desc: "High-rise building materials handling.", icon: "fas fa-building" },
+    { title: "Ports & Logistics", desc: "Container loading and heavy cargo movement.", icon: "fas fa-ship" },
+    { title: "Manufacturing", desc: "Assembly line and machinery positioning.", icon: "fas fa-industry" },
+    { title: "Infrastructure", desc: "Bridge segment lifting and placement.", icon: "fas fa-road" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/eot-cranes.jpg",
+    items: [
+      { key: "Capacity", value: "2 Ton - 50 Ton" },
+      { key: "Max Reach/Span", value: "Up to 80m (Tower) / 40m (EOT)" },
+      { key: "Power Source", value: "Electric (Grid/Generator)" },
+      { key: "Control Type", value: "Cabin, Pendant, or Wireless Remote" },
+      { key: "Height Under Hook", value: "Customizable to project height" }
+    ]
+  },
+  compliance: [
+    { title: "Certified Equipment", desc: "All cranes comply with international lifting standards and third-party certifications.", icon: "fas fa-shield-alt" },
+    { title: "Erection & Dismantling", desc: "Complete team support for safe crane erection, jacking, and dismantling.", icon: "fas fa-truck-loading" },
+    { title: "Operator Supply", desc: "We can provide certified crane operators and riggers for your project.", icon: "fas fa-clipboard-check" },
+    { title: "Maintenance", desc: "Routine inspections and breakdown support to ensure lift safety.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Heavy Lifting Made Easy",
+    subtext: "Get the right crane for your heavy lifting requirements today.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix supplies a robust range of cranes for vertical construction,
+    infrastructure projects, and industrial warehousing. Our lifting solutions 
+    are certified for safety and performance.
+  </p>
+  <p>
+    From self-erecting tower cranes for tight city sites to heavy-duty 
+    EOT cranes for manufacturing facilities, we ensure your lifting 
+    operations are efficient and compliant with all local safety regulations.
+  </p>
+</RentalDetailLayout>

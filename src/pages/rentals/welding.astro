@@ -1,0 +1,64 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Welding Equipment - Velcorix Rentals",
+  metaDesc: "High-performance welding machines for rent in UAE. Velcorix provides certified, well-maintained welding equipment for onshore and offshore projects.",
+  header: {
+    title: "Welding Equipment",
+    subtitle: "Precision welding solutions for every industry",
+    bgImage: "/assets/images/rentals/welding-2.png"
+  },
+  intro: {
+    image: "/assets/images/rentals/welding.png",
+    imageAlt: "Welding Equipment",
+    heading: "High-Performance Welding Machines"
+  },
+  offerings: [
+    { title: "Diesel Welders", desc: "Engine-driven 400A & 500A units for off-grid sites", icon: "fas fa-circle" },
+    { title: "Electric Inverters", desc: "MIG, TIG, and Stick welding machines for precision", icon: "fas fa-circle" },
+    { title: "Plasma Cutters", desc: "High-capacity cutting equipment for metals", icon: "fas fa-circle" },
+    { title: "Welding Accessories", desc: "Cables, electrodes, helmets, and extraction units", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Oil & Gas", desc: "Cross-country pipeline welding and repairs.", icon: "fas fa-oil-can" },
+    { title: "Structural Steel", desc: "Heavy fabrication and steel structure erection.", icon: "fas fa-gavel" },
+    { title: "Marine & Offshore", desc: "Ship repair and rig maintenance works.", icon: "fas fa-ship" },
+    { title: "Workshops", desc: "General fabrication and machinery repair.", icon: "fas fa-wrench" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/welding-2.png",
+    items: [
+      { key: "Amperage Range", value: "200A - 600A" },
+      { key: "Duty Cycle", value: "60% - 100% (Industrial Grade)" },
+      { key: "Processes", value: "SMAW, GTAW, GMAW, FCAW (Multi-process)" },
+      { key: "PowerType", value: "Diesel Engine / Electric 3-Phase" },
+      { key: "Auxiliary Power", value: "3kVA - 10kVA (On Engine Driven Units)" }
+    ]
+  },
+  compliance: [
+    { title: "Safety Certified", desc: "All equipment comes with valid calibration certificates and spark arrestors for hazardous zones.", icon: "fas fa-shield-alt" },
+    { title: "Fast Mobilization", desc: "Same-day delivery available for urgent shutdown requirements.", icon: "fas fa-truck-loading" },
+    { title: "Consumables Supply", desc: "We can supply high-quality electrodes and filler wires with the machines.", icon: "fas fa-clipboard-check" },
+    { title: "On-Site Repair", desc: "Technicians available for on-site troubleshooting to prevent delays.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Ready to Weld?",
+    subtext: "Rent high-quality welding machines for your next project.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix provides a variety of welding machines suitable for heavy
+    industrial use, pipeline construction, and general fabrication. 
+    Our fleet is well-maintained and ready for immediate mobilization.
+  </p>
+  <p>
+    We offer both diesel engine-driven welders for remote sites without 
+    power grids and electric welding inverters for workshop environments. 
+    Our multi-process units ensure versatility for any project requirement.
+  </p>
+</RentalDetailLayout>

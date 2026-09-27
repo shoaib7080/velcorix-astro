@@ -1,0 +1,72 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Personal Protective Equipment (PPE) - Velcorix Trading",
+  metaDesc: "ANSI/EN certified industrial safety gear, hard hats, safety glasses, gloves, footwear, and fall protection in UAE.",
+  header: {
+    title: "Personal Protective Equipment (PPE)",
+    subtitle: "CE & ANSI Certified Personal Protective Equipment",
+    bgImage: "/assets/images/trading/ppe1.png"
+  },
+  intro: {
+    image: "/assets/images/trading/ppe1.png",
+    imageAlt: "Personal Protective Equipment",
+    heading: "Comprehensive Workforce Safety & Protection"
+  },
+  products: [
+    { name: "Face Shield Guard", image: "/assets/images/products/PPE/face-shield-guard.jpg", desc: "Clear polycarbonate impact visor and ratchet headgear assembly." },
+    { name: "Safety Shoes Size 41", image: "/assets/images/products/PPE/safety-shoes.webp", desc: "Steel toe cap S3 rated work boots (EU Size 41)." },
+    { name: "Safety Shoes Size 43", image: "/assets/images/products/PPE/safety-shoes.webp", desc: "Steel toe cap S3 rated work boots (EU Size 43)." },
+    { name: "Safety Shoes Size 44", image: "/assets/images/products/PPE/safety-shoes.webp", desc: "Steel toe cap S3 rated work boots (EU Size 44)." },
+    { name: "Welding Shoes Size 42", image: "/assets/images/products/PPE/welding-shoes.jpg", desc: "Heat-resistant leather welder boots with quick release buckle (EU Size 42)." },
+    { name: "Personal Gas Monitor", image: "/assets/images/products/PPE/personal-gas-monitor.jpg", desc: "Single/Multi-gas personal detector for hazardous environment monitoring." },
+    { name: "Mask 3M 8210 (Filter)", image: "/assets/images/products/PPE/mask-3m-8210-filter.webp", desc: "N95 particulate respirator masks for dust and airborne particles." },
+    { name: "Maxi Gloves", image: "/assets/images/products/PPE/maxi-gloves.jpg", desc: "High-dexterity breathable nylon work gloves with nitrile grip." },
+    { name: "Dotted Gloves Blue", image: "/assets/images/products/PPE/dotted-gloves-blue.jpg", desc: "Cotton knitted safety gloves with blue PVC grip dots." },
+    { name: "Surgical Gloves", image: "/assets/images/products/PPE/surgical-gloves.webp", desc: "Sterile nitrile / latex disposable medical and laboratory gloves." },
+    { name: "Chemical Gloves", image: "/assets/images/products/PPE/chemical-gloves.webp", desc: "Heavy-duty neoprene/nitrile chemical resistant gauntlet gloves." }
+  ],
+  offerings: [
+    { title: "Head & Eye Protection", desc: "ANSI/EN certified safety helmets, goggles, and face shields.", icon: "fas fa-circle" },
+    { title: "Hand & Arm Protection", desc: "Cut-resistant, leather welding, chemical, and impact gloves.", icon: "fas fa-circle" },
+    { title: "Safety Footwear", desc: "Steel-toe and composite-toe safety boots with S3 rating.", icon: "fas fa-circle" },
+    { title: "Fall Protection Systems", desc: "Full body harnesses, energy-absorbing lanyards, and lifelines.", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Heavy Construction", desc: "Site wide PPE compliance for civil workers.", icon: "fas fa-hard-hat" },
+    { title: "Oil & Gas Refineries", desc: "Flame-resistant clothing (FRC) and H2S respiratory gear.", icon: "fas fa-fire-alt" },
+    { title: "Chemical Plants", desc: "Chemical-resistant suits, boots, and full-face respirators.", icon: "fas fa-flask" },
+    { title: "High-Rise Work", desc: "Certified fall arrest harnesses for elevated operations.", icon: "fas fa-arrow-up" }
+  ],
+  specifications: {
+    image: "/assets/images/trading/ppe1.png",
+    items: [
+      { key: "Safety Standards", value: "ANSI Z87.1, EN 397, EN 388, EN ISO 20345 (S3), CE Certified" },
+      { key: "Material Grades", value: "High-Impact ABS, Nomex/Kevlar FRC, Heavy-Duty Grain Leather" },
+      { key: "Sizes Available", value: "Full range from Small to 3XL / Shoes 38 to 47 EU" },
+      { key: "Custom Branding", value: "Logo printing on safety helmets and hi-vis vests available" }
+    ]
+  },
+  compliance: [
+    { title: "CE & ANSI Certified", desc: "100% compliant with UAE Ministry & Municipality safety laws.", icon: "fas fa-certificate" },
+    { title: "Quality Audited", desc: "Sourced from accredited global safety manufacturers.", icon: "fas fa-shield-alt" },
+    { title: "Corporate Branding", desc: "Custom logo printing on helmets, vests, and coveralls.", icon: "fas fa-id-card" },
+    { title: "Immediate Dispatch", desc: "Large UAE warehouse inventory for emergency safety replenishment.", icon: "fas fa-truck" }
+  ],
+  cta: {
+    heading: "Equip Your Workforce Safely",
+    subtext: "Contact us for corporate safety equipment quotes and custom logo options.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix provides certified Personal Protective Equipment (PPE) and industrial safety gear compliant with EN, ANSI, and CE standards to protect workforces in hazardous construction, refinery, and offshore environments.
+  </p>
+  <p>
+    Our workforce protection portfolio includes high-impact face shields, S3-rated steel and composite toe safety footwear, single/multi-gas personal detectors, N95 3M respirators, and cut/chemical-resistant gloves. We ensure full workplace compliance with UAE Ministry of Labor safety regulations and offer corporate logo customization.
+  </p>
+</RentalDetailLayout>

@@ -1,0 +1,64 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Tube & Shell Equipment - Velcorix Rentals",
+  metaDesc: "Maintenance and replacement equipment for heat exchangers in UAE. Velcorix provides bundle pullers, cleaning systems, and retubing tools.",
+  header: {
+    title: "Tube & Shell Equipment",
+    subtitle: "Maintenance and replacement equipment for heat exchangers",
+    bgImage: "/assets/images/rentals/shell-and-tube-heat-exchangers-500x500.webp"
+  },
+  intro: {
+    image: "/assets/images/rentals/t&s-he.jpg",
+    imageAlt: "Tube & Shell Equipment",
+    heading: "Heat Exchanger Solutions"
+  },
+  offerings: [
+    { title: "Bundle Pullers", desc: "Aerial and truck-mounted extractors for safe removal", icon: "fas fa-circle" },
+    { title: "Tube Cleaning", desc: "High-pressure water jetting lances and nozzles", icon: "fas fa-circle" },
+    { title: "Retubing Tools", desc: "Cutters, pullers, and expanders for tube replacement", icon: "fas fa-circle" },
+    { title: "Testing Plugs", desc: "Hydro and pneumatic plugs for leak detection", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Shutdowns", desc: "Critical maintenance during plant shutdowns.", icon: "fas fa-cogs" },
+    { title: "Refineries", desc: "Heat exchanger servicing in oil refineries.", icon: "fas fa-industry" },
+    { title: "Power Plants", desc: "Condenser and cooler maintenance outages.", icon: "fas fa-bolt" },
+    { title: "Petrochemical", desc: "Process heat exchanger cleaning and repair.", icon: "fas fa-flask" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/t&s-he-2.jpg",
+    items: [
+      { key: "Bundle Weight", value: "Up to 60 Tons (Puller capacity)" },
+      { key: "Bundle Length", value: "Up to 12 meters / custom lengths" },
+      { key: "Cleaning Pressure", value: "Up to 40,000 PSI (Ultra High Pressure)" },
+      { key: "Tube Size Range", value: '1/2" to 3" OD' },
+      { key: "Mounting", value: "Truck Mounted / Crane Suspended (Aerial)" }
+    ]
+  },
+  compliance: [
+    { title: "Safety First", desc: "Equipment comes with fail-safe mechanisms and deadman switches for operator safety.", icon: "fas fa-shield-alt" },
+    { title: "Operator Training", desc: "We provide on-site training or certified operators for bundle extraction.", icon: "fas fa-truck-loading" },
+    { title: "Inspection Services", desc: "IRIS and Eddy Current inspection services can be integrated with rental.", icon: "fas fa-clipboard-check" },
+    { title: "Custom Tooling", desc: "Fabrication of custom jigs and fixtures for unique exchanger configurations.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Optimize Heat Transfer",
+    subtext: "Rent professional heat exchanger maintenance equipment today.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix supplies specialized equipment for the inspection, maintenance, 
+    repair, and re-tubing of shell and tube heat exchangers. Our tools 
+    are designed to improve efficiency during turnaround and shutdown activities.
+  </p>
+  <p>
+    From powerful tube bundle pullers to precision cleaning systems and 
+    testing plugs, we ensure your heat exchangers are serviced safely 
+    and returned to optimal performance.
+  </p>
+</RentalDetailLayout>

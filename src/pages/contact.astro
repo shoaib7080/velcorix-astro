@@ -1,0 +1,136 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Button from '../components/Button.astro';
+---
+<BaseLayout title="Contact Us - Velcorix" description="Get in touch with Velcorix for your mechanical trading, consultancy, and equipment rental needs. Contact our team in Dubai for a technical evaluation and quote.">
+    <PageHeader 
+      title="Contact Us" 
+      subtitle="We'd Love to Hear From You" 
+      bgImage="assets/images/hero/DSC_2414.JPG" 
+    />
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <div class="p-4 bg-light shadow rounded h-100">
+              <h3 class="mb-4 text-primary">Get In Touch</h3>
+              <form method="POST" id="form">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="a3101cef-d9c3-4070-860a-ac480d9851c7"
+                />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="New enquiry from Velcorix"
+                />
+                <input
+                  type="checkbox"
+                  name="botcheck"
+                  id=""
+                  style="display: none"
+                />
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Your Name"
+                    name="Name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Your Email"
+                    name="Email"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="subject" class="form-label">Subject</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="subject"
+                    placeholder="Subject"
+                    name="Subject"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    rows="5"
+                    placeholder="Your Message"
+                    name="Message"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Send Message
+                </button>
+                <div id="result"></div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="h-100">
+              <div class="mb-4">
+                <h3 class="text-secondary">Contact Information</h3>
+                <p>
+                  Feel free to visit our office or contact us via phone or
+                  email.
+                </p>
+              </div>
+              <div class="d-flex align-items-center mb-4">
+                <div class="bg-primary text-white p-3 rounded-circle me-3">
+                  <i class="fas fa-map-marker-alt fa-lg"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Address</h5>
+                  <p class="mb-0 text-muted">
+                    Business Bay, Dubai, United Arab Emirates
+                  </p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-4">
+                <div class="bg-primary text-white p-3 rounded-circle me-3">
+                  <i class="fas fa-phone fa-lg"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Phone</h5>
+                  <p class="mb-0 text-muted">+971 50 123 4567</p>
+                </div>
+              </div>
+              <div class="d-flex align-items-center mb-4">
+                <div class="bg-primary text-white p-3 rounded-circle me-3">
+                  <i class="fas fa-envelope fa-lg"></i>
+                </div>
+                <div>
+                  <h5 class="mb-0">Email</h5>
+                  <p class="mb-0 text-muted">info@velcorix.com</p>
+                </div>
+              </div>
+
+              <!-- Map Placeholder -->
+              <div
+                class="bg-secondary text-white d-flex align-items-center justify-content-center rounded"
+                style="height: 250px"
+              >
+                <p class="mb-0"><i class="fas fa-map"></i> Google Maps Embed</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+</BaseLayout>

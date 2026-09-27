@@ -1,0 +1,64 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Air Compressors - Velcorix Rentals",
+  metaDesc: "Reliable air compression for industrial applications in UAE. Velcorix provides portable diesel and electric air compressors for rent.",
+  header: {
+    title: "Air Compressors",
+    subtitle: "Reliable air compression for industrial applications",
+    bgImage: "/assets/images/rentals/Liquid-Ring-Compressors.jpg"
+  },
+  intro: {
+    image: "/assets/images/rentals/Rotary-Lobe-Compressors.jpg",
+    imageAlt: "Air Compressors",
+    heading: "Heavy-Duty Compression Solutions"
+  },
+  offerings: [
+    { title: "Portable Diesel Compressors", desc: "185 CFM to 1600 CFM units for construction use", icon: "fas fa-circle" },
+    { title: "Electric Compressors", desc: "Stationary screw compressors for plant air supply", icon: "fas fa-circle" },
+    { title: "High-Pressure Units", desc: "Up to 25 bar for sandblasting and pressure testing", icon: "fas fa-circle" },
+    { title: "Air Treatment", desc: "Air dryers, filters, and moisture separators available", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Construction", desc: "Powering jackhammers and pneumatic drills.", icon: "fas fa-hammer" },
+    { title: "Oil & Gas", desc: "Pipeline drying and pneumatic testing.", icon: "fas fa-oil-can" },
+    { title: "Sandblasting", desc: "High-flow air for surface preparation and painting.", icon: "fas fa-paint-roller" },
+    { title: "Manufacturing", desc: "Reliable compressed air for factory automation.", icon: "fas fa-industry" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/Rotary-Screw-Compressors.jpg",
+    items: [
+      { key: "Pressure Range", value: "7 bar - 25 bar" },
+      { key: "Flow Rate", value: "100 CFM - 1600 CFM" },
+      { key: "Engine Type", value: "Diesel Engine / Electric Motor" },
+      { key: "Compressor Type", value: "Oil-Injected Rotary Screw" },
+      { key: "Mounting", value: "Portable Wheel or Skid Mounted" }
+    ]
+  },
+  compliance: [
+    { title: "Safety Features", desc: "Equipped with emergency stops and pressure relief valves for safe operation.", icon: "fas fa-shield-alt" },
+    { title: "Hassle-Free Logistics", desc: "We handle the transportation and positioning of compressors at your site.", icon: "fas fa-truck-loading" },
+    { title: "Regular Maintenance", desc: "Scheduled service visits included to keep equipment running at peak efficiency.", icon: "fas fa-clipboard-check" },
+    { title: "Accessories", desc: "Hoses, manifolds, and efficient air dryers can be supplied as a package.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Need Air Power?",
+    subtext: "Contact us for reliable air compressor rentals tailored to your needs.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Ensure continuous operation of your pneumatic tools and plant air
+    systems with Velcorix's fleet of high-performance air compressors. 
+    We offer solutions tailored for both construction sites and industrial facilities.
+  </p>
+  <p>
+    Our inventory includes portable diesel compressors for mobility and 
+    efficient electric units for stationary applications. We also provide 
+    air dryers and high-pressure boosters for specialized testing requirements.
+  </p>
+</RentalDetailLayout>

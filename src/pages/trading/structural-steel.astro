@@ -1,0 +1,70 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Structural Steel - Velcorix Trading",
+  metaDesc: "High-grade structural steel beams, channels, angles, merchant bars, steel plates, and floor gratings across the UAE.",
+  header: {
+    title: "Structural Steel",
+    subtitle: "Certified Mill Test Traceable Beams, Channels & Plates",
+    bgImage: "/assets/images/trading/steel1.png"
+  },
+  intro: {
+    image: "/assets/images/trading/steel1.png",
+    imageAlt: "Structural Steel",
+    heading: "High-Strength Structural Steel Sections & Plates"
+  },
+  products: [
+    { name: "Beams", image: "/assets/images/products/STEEL/beams.jpeg", desc: "UB, UC, IPE, HEA, and HEB structural steel beams." },
+    { name: "Channels", image: "/assets/images/products/STEEL/channels.webp", desc: "PFC and UPN steel channels for structural framing." },
+    { name: "Angles", image: "/assets/images/products/STEEL/angles.jpeg", desc: "Equal and unequal steel angles in various thicknesses." },
+    { name: "Merchant Bars", image: "/assets/images/products/STEEL/merchant.jpeg", desc: "Flat bars, round bars, square bars, and T-sections." },
+    { name: "Mild Steel Sheets & Plates", image: "/assets/images/products/STEEL/mild-steel-sheets-plates.jpg", desc: "High-yield steel plates for heavy fabrication and tanks." },
+    { name: "Chequered Plates", image: "/assets/images/products/STEEL/chequered-plates.jpeg", desc: "Tread plates for flooring, walkways, and stair steps." },
+    { name: "Galvanized Sheets", image: "/assets/images/products/STEEL/galvanized-steel-decking-sheet-for-construction-thickness-1-2-mm.jpg", desc: "Corrosion-resistant hot-dip galvanized steel sheets." },
+    { name: "Cold Rolled Sheets", image: "/assets/images/products/STEEL/cold-rolled-steel.jpg", desc: "Precision smooth-finish cold rolled steel sheets." },
+    { name: "Gratings", image: "/assets/images/products/STEEL/gratings.jpeg", desc: "Electro-forged steel floor gratings and stair treads." }
+  ],
+  offerings: [
+    { title: "Beams & Columns", desc: "Universal Beams (UB), Universal Columns (UC), IPE, HEA, HEB sections.", icon: "fas fa-circle" },
+    { title: "Channels & Angles", desc: "Equal & unequal angles, PFC and UPN steel channels.", icon: "fas fa-circle" },
+    { title: "Steel Plates & Sheets", desc: "High-yield MS plates, chequered tread plates, galvanized sheets.", icon: "fas fa-circle" },
+    { title: "Floor Gratings", desc: "Electro-forged steel serrated gratings and stair treads.", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Building Construction", desc: "Structural frames for warehouses, towers, and platforms.", icon: "fas fa-building" },
+    { title: "Oil & Gas Structures", desc: "Offshore skid frames, pipe racks, and platform decks.", icon: "fas fa-oil-can" },
+    { title: "Infrastructure", desc: "Bridges, highway gantries, and industrial sheds.", icon: "fas fa-road" },
+    { title: "Marine & Shipyards", desc: "Deck plates, stiffeners, and structural bulkheads.", icon: "fas fa-ship" }
+  ],
+  specifications: {
+    image: "/assets/images/trading/steel1.png",
+    items: [
+      { key: "Steel Grades", value: "S275JR, S355JR / J2, ASTM A36, A572 Grade 50" },
+      { key: "Section Standards", value: "EN 10025, BS 4-1, ASTM A6" },
+      { key: "Lengths", value: "Standard 6m, 12m, 14m or custom cut-to-length options" },
+      { key: "Coatings", value: "Bare, Primer Coated, Hot-Dip Galvanized (EN ISO 1461)" }
+    ]
+  },
+  compliance: [
+    { title: "Mill Test Certificates", desc: "3.1 MTC provided with heat number traceability for every section.", icon: "fas fa-certificate" },
+    { title: "Third-Party Inspected", desc: "Full dimensional and chemical compliance verification.", icon: "fas fa-shield-alt" },
+    { title: "Custom Processing", desc: "Cutting, shot blasting, and priming services available.", icon: "fas fa-cut" },
+    { title: "Fleet Delivery", desc: "Heavy transport delivery direct to project sites.", icon: "fas fa-truck" }
+  ],
+  cta: {
+    heading: "Source Structural Steel",
+    subtext: "Contact us for competitive tonnage pricing, cut-to-length services, and site delivery.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix is a leading stockist and supplier of certified structural steel sections, plates, channels, and gratings serving major infrastructure, oil & gas, and commercial building projects across the UAE.
+  </p>
+  <p>
+    Our extensive steel inventory features high-yield S275, S355, and ASTM A36 universal beams (UB/UC), equal/unequal angles, chequered tread plates, galvanized decking sheets, and electro-forged floor gratings. All sections come with complete 3.1 heat traceability and optional shot-blasting, priming, and cut-to-length processing.
+  </p>
+</RentalDetailLayout>

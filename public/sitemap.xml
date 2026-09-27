@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://www.velcorix.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/about.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/contact.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Main Pages -->
+  <url>
+    <loc>https://www.velcorix.com/services.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals.html</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Services Pages -->
+  <url>
+    <loc>https://www.velcorix.com/services/epc.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/pre-commissioning.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/shutdown-management.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/consultancy-advisory.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/consultancy.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Specialized Services -->
+  <url>
+    <loc>https://www.velcorix.com/services/specialised-services.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/upstream-downstream.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/upstream.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/downstream.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/petrochemical.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/offshore.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Flange Management -->
+  <url>
+    <loc>https://www.velcorix.com/services/flange-management.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/bolt-torquing.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/bolt-tensioning.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/flange-machining.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/flange-support.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Specialized Manpower -->
+  <url>
+    <loc>https://www.velcorix.com/services/specialised-manpower.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/manpower-shutdown.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/manpower-precomm.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/manpower-lifting.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/manpower-hac.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Additional Services -->
+  <url>
+    <loc>https://www.velcorix.com/services/pneumatic-testing.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/hot-tapping.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/project-management.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/engg-construction.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/services/crane-installation.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://www.velcorix.com/privacy-policy.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/terms-and-conditions.html</loc>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Rental Equipment Pages -->
+  <url>
+    <loc>https://www.velcorix.com/rentals/generators.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/welding.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/compressors.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/hydrotesting.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/tube-shell.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/binder-pullers.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/earth-moving.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/cranes.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/solar-5kw.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/rentals/solar-10kw.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>

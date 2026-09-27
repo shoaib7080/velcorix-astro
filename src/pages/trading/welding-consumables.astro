@@ -1,0 +1,76 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Welding Consumables - Velcorix Trading",
+  metaDesc: "High-grade welding electrodes, wires, filler rods, and cutting discs for industrial welding applications across the UAE.",
+  header: {
+    title: "Welding Consumables",
+    subtitle: "AWS & EN Approved Welding Electrodes, Wires & Accessories",
+    bgImage: "/assets/images/trading/weild1.png"
+  },
+  intro: {
+    image: "/assets/images/trading/weild1.png",
+    imageAlt: "Welding Consumables",
+    heading: "Certified High-Grade Welding Consumables"
+  },
+  products: [
+    { name: "Back Cup Welding TIG Torch (Small)", image: "/assets/images/products/WEILDING/tigtorch.jpg", desc: "Back cup assembly for small TIG welding torches." },
+    { name: "Arc Holder", image: "/assets/images/products/WEILDING/archolder.jpg", desc: "Heavy-duty electrode arc holder for manual arc welding." },
+    { name: "Argon Torch Lincoln Machine", image: "/assets/images/products/WEILDING/argon-torch-lincoln-machine.jpg", desc: "TIG argon torch assembly compatible with Lincoln welding machines." },
+    { name: "Argon Torch ESAB Welding Machine", image: "/assets/images/products/WEILDING/argon-torch-esab-welding-machine.jpg", desc: "Heavy-duty TIG argon torch compatible with ESAB welding units." },
+    { name: "Argon Torch Washer", image: "/assets/images/products/WEILDING/washer.jpg", desc: "Insulating and sealing washers for TIG torch heads." },
+    { name: "Argon Hose Connector 1/4\"", image: "/assets/images/products/WEILDING/hose.jpg", desc: "1/4\" regulator to argon hose quick connector and fittings." },
+    { name: "Ceramic Cup Size 6 & 7", image: "/assets/images/products/WEILDING/ceramic.jpg", desc: "Alumina ceramic gas lens cups No.6 and No.7 for TIG torches." },
+    { name: "Collet Body 2.4mm", image: "/assets/images/products/WEILDING/collectbody.jpeg", desc: "Precision copper collet body 2.4mm for TIG electrode clamping." },
+    { name: "Tungsten Rod 2.4mm", image: "/assets/images/products/WEILDING/tungeston.jpg", desc: "Thoriated / Ceriated 2.4mm tungsten electrodes for TIG welding." },
+    { name: "Filler Rod 2.3mm ER80S-Ni-1", image: "/assets/images/products/WEILDING/filler.jpg", desc: "Low-alloy TIG filler wire for high-strength pressure vessel joints." },
+    { name: "Electrode E 8018 2.5mm", image: "/assets/images/products/WEILDING/electrode.jpg", desc: "Low-hydrogen stick welding electrodes 2.5mm." },
+    { name: "Short Cable for Welding - 50mm", image: "/assets/images/products/WEILDING/shortcable.jpg", desc: "Flexible copper welding lead whip cable 50mm²." },
+    { name: "Tig Torch Set (5 Set)", image: "/assets/images/products/WEILDING/tigtorch.webp", desc: "Complete 5-piece TIG torch package with cables and consumables." },
+    { name: "Welding Rod 7018, 3.2mm", image: "/assets/images/products/WEILDING/weildingrod.avif", desc: "High-yield structural E7018 stick welding electrodes 3.2mm." },
+    { name: "Mini Welding Torch", image: "/assets/images/products/WEILDING/miniweildingtorch.webp", desc: "Compact lightweight TIG torch for intricate detail and pipe welding." }
+  ],
+  offerings: [
+    { title: "Stick Electrodes (SMAW)", desc: "E6010, E7018, stainless steel, and specialty alloy electrodes.", icon: "fas fa-circle" },
+    { title: "MIG & SAW Wires", desc: "Solid MIG wires, flux-cored wires, and submerged arc wires.", icon: "fas fa-circle" },
+    { title: "TIG Filler Rods", desc: "Precision filler wires for carbon steel, stainless steel, and aluminum.", icon: "fas fa-circle" },
+    { title: "Weld Prep Abrasives", desc: "Heavy-duty grinding, beveling, and cutting discs for weld prep.", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Pipeline Welding", desc: "Cross-country oil and gas pipeline fabrication.", icon: "fas fa-oil-can" },
+    { title: "Vessel Fabrication", desc: "Heavy pressure vessel and boiler manufacturing.", icon: "fas fa-drum" },
+    { title: "Structural Fabrication", desc: "Steel building frames, bridges, and infrastructure.", icon: "fas fa-gavel" },
+    { title: "Maintenance & Repair", desc: "Hardfacing, buildup, and equipment re-conditioning.", icon: "fas fa-wrench" }
+  ],
+  specifications: {
+    image: "/assets/images/trading/weild1.png",
+    items: [
+      { key: "AWS Classification", value: "AWS A5.1, A5.5, A5.9, A5.18, A5.20" },
+      { key: "Wire Diameters", value: "0.8mm, 1.0mm, 1.2mm, 1.6mm, 2.4mm, 3.2mm" },
+      { key: "Alloy Types", value: "Carbon Steel, Low Alloy, Stainless Steel (308L/316L), Inconel" },
+      { key: "Certifications", value: "ABS, DNV, Lloyd's Register approved consumables" }
+    ]
+  },
+  compliance: [
+    { title: "Approved Consumables", desc: "Full AWS/EN compliance with batch test certificates.", icon: "fas fa-certificate" },
+    { title: "Moisture Proof", desc: "Hermetically sealed vacuum packaging to prevent hydrogen cracking.", icon: "fas fa-box" },
+    { title: "Technical Guidance", desc: "Assistance with WPS / PQR consumable selection.", icon: "fas fa-headset" },
+    { title: "Reliable Inventory", desc: "Ready stock of major international brands for quick dispatch.", icon: "fas fa-truck" }
+  ],
+  cta: {
+    heading: "Need High-Grade Welding Consumables?",
+    subtext: "Contact us for batch test certificates, technical data sheets, and bulk quotes.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix supplies high-grade AWS and EN certified welding consumables, electrodes, wires, and TIG accessories engineered for critical structural, pipeline, and pressure vessel fabrication across the UAE energy sector.
+  </p>
+  <p>
+    Our product range includes low-hydrogen E7018/E8018 stick electrodes, ER80S filler rods, solid MIG/MAG wires, alumina gas lens ceramic cups, precision collet bodies, and heavy-duty TIG torches. Every batch is packaged in hermetically sealed moisture-proof containers and backed by 3.1 Mill Test Certificates.
+  </p>
+</RentalDetailLayout>

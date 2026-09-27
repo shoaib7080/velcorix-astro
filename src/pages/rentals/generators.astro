@@ -1,0 +1,66 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Power Generators - Velcorix Rentals",
+  metaDesc: "High-performance power generators for rent in UAE. Velcorix provides reliable, well-maintained generators for onshore and offshore industrial projects.",
+  header: {
+    title: "Power Generators",
+    subtitle: "Reliable energy solutions for any project scale",
+    bgImage: "/assets/images/other/10kw-diesel-power-generator.jpg"
+  },
+  intro: {
+    image: "/assets/images/other/10kw-diesel-power-generator-2.jpg",
+    imageAlt: "Power Generators",
+    heading: "High-Performance Power Generators"
+  },
+  offerings: [
+    { title: "Diesel Generators", desc: "Engine-driven units from 50 kVA to 2000 kVA for off-grid power.", icon: "fas fa-bolt" },
+    { title: "Soundproof Canopies", desc: "Weatherproof and acoustic enclosures meeting strict noise limits.", icon: "fas fa-volume-mute" },
+    { title: "Load Bank Testing", desc: "Full resistive and reactive load bank testing before mobilization.", icon: "fas fa-vial" },
+    { title: "Fuel Management", desc: "Integrated fuel tanks and auxiliary fuel system connections.", icon: "fas fa-gas-pump" }
+  ],
+  applications: [
+    { title: "Construction", desc: "Temporary power for site offices, machinery, and lighting.", icon: "fas fa-building" },
+    { title: "Oil & Gas", desc: "Reliable power for remote drilling rigs and processing facilities.", icon: "fas fa-oil-can" },
+    { title: "Shutdowns", desc: "Peak power supply during refinery plant turnarounds.", icon: "fas fa-industry" },
+    { title: "Facilities", desc: "Emergency backup power for commercial and industrial plants.", icon: "fas fa-hospital" }
+  ],
+  specifications: {
+    image: "/assets/images/other/10kw-diesel-power-generator.jpg",
+    items: [
+      { key: "Power Output", value: "50 kVA to 2000 kVA" },
+      { key: "Fuel Type", value: "Diesel" },
+      { key: "Frequency", value: "50Hz / 60Hz" },
+      { key: "Voltage", value: "220V / 380V / 415V / 440V" },
+      { key: "Noise Level", value: "Soundproof (70 dBA @ 7m)" }
+    ]
+  },
+  compliance: [
+    { title: "Strict HSE Standards", desc: "Fully certified equipment meeting rigorous HSE standards including local municipality regulations.", icon: "fas fa-shield-alt" },
+    { title: "Mobilization & Setup", desc: "End-to-end logistics support from transportation to site installation and cabling.", icon: "fas fa-truck-loading" },
+    { title: "Testing & Commissioning", desc: "Comprehensive load bank testing and synchronization to ensure system reliability.", icon: "fas fa-clipboard-check" },
+    { title: "24/7 Site Support", desc: "Round-the-clock technical assistance and maintenance teams to minimize downtime.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Need Power Now?",
+    subtext: "Our team can assist with technical selection and availability immediately.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix provides certified, well-maintained rental equipment for
+    shutdowns, commissioning, and industrial operations. Our fleet is
+    maintained to meet site requirements and can be mobilized across
+    the UAE.
+  </p>
+  <p>
+    Whether you need temporary power for a construction site or a
+    robust backup solution for a critical facility, our generators are
+    designed to deliver consistent energy efficiency and operational
+    safety.
+  </p>
+</RentalDetailLayout>

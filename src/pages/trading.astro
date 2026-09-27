@@ -1,0 +1,250 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CtaSection from '../components/CtaSection.astro';
+
+const categories = [
+  {
+    title: "HARDWARE",
+    image: "/assets/images/trading/hardware1.png",
+    icon: "fas fa-tools",
+    link: "/trading/hardware",
+    products: [
+      "WD-40",
+      "Flap disc 4.5\" SS & CS",
+      "Flap disc 7\" SS & CS",
+      "Cup brush SS & CS",
+      "Wire brush SS & CS",
+      "Fiber Disc 7\"",
+      "Cutting Disc 1.6mm 4.5\" CS",
+      "Cutting Disc 1.6mm 4.4\" SS",
+      "Cutting Disc 3 mm 7\" CS",
+      "Cutting Disc 3 mm 7\" SS",
+      "Cutting Disc 1.6mm 7\" CS",
+      "Cutting Disc 1.6mm 7\" SS",
+      "Paint remover 3.6 L",
+      "Hexa blade yellow colour",
+      "Knife blade",
+      "Loctite Paste 567",
+      "Paint marker black & white",
+      "AG 4.5 cutting wheel 3mm for SS",
+      "AG 4.5 cutting wheel 1mm",
+      "AG 7 cutting wheel 3mm for SS",
+      "Spirit Level 12\"",
+      "Spirit Level 18\"",
+      "Spirit Level 1 Mtr",
+      "Right Angle 12\"",
+      "Right Angle 18\"",
+      "Clear Tape Size 2\"",
+      "Nylon Rope 8MM",
+      "Warning Tape (blue white)",
+      "Jubilee Clamp 1/2\"",
+      "Paint Spray (Orange, White, Blue, Green)",
+      "AG 4.5 Grinder 110V",
+      "AG 7 Makita Model No-GA7050B, Carbon No-203",
+      "Angle grinder AG 4.5 Dewalt Carbon (For Repair)",
+      "COCO Brush + Handle 12\"",
+      "MOLYKOTE 1000",
+      "COPPER GREASE",
+      "LOCTITE 401"
+    ]
+  },
+  {
+    title: "STATIONERY",
+    image: "/assets/images/trading/sta1.png",
+    icon: "fas fa-paperclip",
+    link: "/trading/stationery",
+    products: [
+      "Paper Products",
+      "Files & Folders",
+      "Writing Instruments",
+      "Desk Accessories",
+      "Office Essentials",
+      "General Stationery"
+    ]
+  },
+  {
+    title: "WELDING CONSUMABLES",
+    image: "/assets/images/trading/weild1.png",
+    icon: "fas fa-fire-burner",
+    link: "/trading/welding-consumables",
+    products: [
+      "Back cup welding tig torch (Small)",
+      "Arc Holder",
+      "Argon torch Lincoln machine",
+      "Argon torch ESAB welding machine",
+      "Argon torch washer",
+      "Argon hose connector 1/4\"",
+      "Ceramic cup No.6 & 7",
+      "Collet body 2.4mm",
+      "Tungsten rod 2.4mm",
+      "Filler 2.3mm ER80S-Ni-1",
+      "Electrode E 8018 2.5 mm",
+      "Short cable for welding - 50 mm",
+      "Tig Torch Set (5 Set)",
+      "Welding Rod 7018, 3.2MM",
+      "Mini Welding Torch"
+    ]
+  },
+  {
+    title: "PERSONAL PROTECTIVE EQUIPMENT (PPE)",
+    image: "/assets/images/trading/ppe1.png",
+    icon: "fas fa-hard-hat",
+    link: "/trading/ppe",
+    products: [
+      "Face Shield Guard",
+      "Safety Shoes Size 41",
+      "Safety Shoes Size 43",
+      "Safety Shoes Size 44",
+      "Welding Shoes Size 42",
+      "Personal Gas Monitor",
+      "Mask 3M 8210 (Filter)",
+      "Maxi Gloves",
+      "Dotted Gloves Blue",
+      "Surgical Gloves",
+      "Chemical Gloves"
+    ]
+  },
+  {
+    title: "STRUCTURAL STEEL",
+    image: "/assets/images/trading/steel1.png",
+    icon: "fas fa-cubes",
+    link: "/trading/structural-steel",
+    products: [
+      "Beams",
+      "Channels",
+      "Angles",
+      "Merchant Bars",
+      "Mild Steel Sheets & Plates",
+      "Chequered Plates",
+      "Galvanized Sheets",
+      "Cold Rolled Sheets",
+      "Gratings"
+    ]
+  },
+  {
+    title: "ATEX PRODUCTS",
+    image: "/assets/images/trading/atex1.png",
+    icon: "fas fa-bolt",
+    link: "/trading/atex",
+    products: [
+      "Socket Male & Female 4 Pin",
+      "Cable Tie 300MM (Orange, White, Blue, Green & Black)",
+      "Single Phase Electric Cable 1.5MM 2 Core (Black)",
+      "Electrical 1.5mm 3 Core (Black)",
+      "Insulation Tape (Red, Green, Black, White, Blue, Yellow)",
+      "SS Cable Tag Plate, 89X19X0.5MM, SS 316",
+      "Cable Tie PVC Black, 2.5X100 mm, Nylon 66",
+      "Cable Tie PVC Black, 3.6X150 mm, Nylon 66",
+      "Cable Tie PVC Black, 3.6X200 mm, Nylon 66",
+      "Cable Tie PVC Black, 3.6X300 mm, Nylon 66",
+      "SS Cable Tie PVC Coated Ball Lock Black, 4.6X100 mm, SS 316L",
+      "SS Cable Tie PVC Coated Ball Lock Black, 3.6X150 mm, SS 316L",
+      "SS Cable Tie PVC Coated Ball Lock Black, 3.6X200 mm, SS 316L",
+      "SS Cable Tie PVC Coated Ball Lock Black, 4.6X300 mm, SS 316L",
+      "SS Cable Tie PVC Coated Ball Lock Black, 4.6X450 mm, SS 316L",
+      "Terminal Header Weidmuller SCHT 55, SCHT 5S"
+    ]
+  },
+  {
+    title: "H120 DOORS & WINDOWS",
+    image: "/assets/images/trading/h120.png",
+    icon: "fas fa-door-closed",
+    link: "/trading/h120-doors-windows",
+    products: [
+      "H120 Fire Rated & Blast Doors",
+      "H120 Fire Windows & Vision Panels"
+    ]
+  }
+];
+---
+<BaseLayout title="Trading Categories - Velcorix" description="Explore Velcorix's comprehensive range of mechanical trading products.">
+  <PageHeader 
+    title="Trading Categories" 
+    subtitle="Our Comprehensive Range of Quality Products" 
+    bgImage="/assets/images/hero/DSC_2364-1920.jpg" 
+  />
+
+  <section class="py-5 bg-light">
+    <div class="container text-center">
+      <p class="lead mb-0">
+        Velcorix provides high-quality trading materials for construction, manufacturing, and industrial operations across the UAE. Browse our extensive inventory of unique products below.
+      </p>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <div class="row g-4">
+        {categories.map((cat) => (
+          <div class="col-lg-4 col-md-6">
+            <a href={cat.link} class="text-decoration-none text-dark d-block h-100">
+              <div class="trading-category-card h-100 shadow-sm bg-white rounded overflow-hidden">
+                <div class="card-img-container position-relative d-flex align-items-center justify-content-center bg-white" style="height: 220px; padding: 1.25rem;">
+                  <img src={cat.image} alt={cat.title} class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain; filter: brightness(1.02) contrast(1.02); image-rendering: -webkit-optimize-contrast;" onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';" />
+                  <div class="icon-badge text-white position-absolute d-flex align-items-center justify-content-center rounded-circle shadow" style="background-color: #c7a14a;">
+                    <i class={cat.icon}></i>
+                  </div>
+                </div>
+                <div class="card-body p-4 pt-5 text-center">
+                  <div class="d-flex align-items-center justify-content-center gap-2 mb-3">
+                    <h4 class="fw-bold mb-0" style="color: #1a284c;">{cat.title}</h4>
+                  </div>
+                  <div class="badge bg-light text-dark border mb-3">{cat.products.length} Products</div>
+                  
+                  <ul class="list-unstyled text-start mb-0">
+                    {cat.products.length > 0 ? (
+                      <Fragment>
+                        {cat.products.slice(0, 5).map((product) => (
+                          <li class="mb-2 text-muted small border-bottom pb-1 text-truncate"><i class="fas fa-check text-primary me-2 opacity-50"></i> {product}</li>
+                        ))}
+                        {cat.products.length > 5 && (
+                          <li class="mb-2 text-primary small fw-bold text-center pt-2">+ {cat.products.length - 5} more...</li>
+                        )}
+                      </Fragment>
+                    ) : (
+                      <li class="mb-2 text-muted small fst-italic text-center">Coming soon</li>
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaSection 
+    heading="Looking for a specific product?" 
+    subtext="Our team can source it for you." 
+    buttonText="Contact Us" 
+    buttonLink="/contact" 
+  />
+</BaseLayout>
+
+<style>
+  .trading-category-card {
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+  }
+  .trading-category-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.15)!important;
+    border-color: #ea8223;
+  }
+  .card-img-container {
+    border-bottom: 3px solid #ea8223;
+    padding: 1rem;
+    background-color: white;
+  }
+  .icon-badge {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid white;
+  }
+</style>

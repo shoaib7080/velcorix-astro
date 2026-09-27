@@ -1,0 +1,200 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CtaSection from '../components/CtaSection.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const { data = {} } = Astro.props;
+
+const metaTitle = data?.metaTitle || "Velcorix Equipment Rental";
+const metaDesc = data?.metaDesc || "High-performance equipment rentals and services across the UAE.";
+const headerTitle = data?.header?.title || "Equipment Rental";
+const headerSubtitle = data?.header?.subtitle || "Reliable solutions for industrial projects";
+const headerBg = data?.header?.bgImage || "/assets/images/hero/DSC_2364-1920.jpg";
+const introImg = data?.intro?.image || "/assets/images/logo/velcorix-logo.png";
+const introAlt = data?.intro?.imageAlt || headerTitle;
+const introHeading = data?.intro?.heading || headerTitle;
+
+const products = data?.products || [];
+const offerings = data?.offerings || [];
+const applications = data?.applications || [];
+const specifications = data?.specifications || null;
+const compliance = data?.compliance || [];
+---
+<BaseLayout title={metaTitle} description={metaDesc}>
+    <!-- Header -->
+    <PageHeader 
+      title={headerTitle} 
+      subtitle={headerSubtitle} 
+      bgImage={headerBg} 
+    />
+
+    <!-- Content -->
+    <!-- Intro Section -->
+    <section class={`section-padding ${products.length > 0 ? 'pb-4' : ''}`}>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0 text-center">
+            <div class="bg-white p-3 rounded shadow-sm border d-inline-block w-100">
+              <img
+                src={introImg}
+                class="img-fluid intro-image rounded"
+                alt={introAlt}
+                style="max-height: 420px; width: 100%; object-fit: contain; filter: brightness(1.02) contrast(1.02);"
+                onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="mb-3 fw-bold" style="color: var(--primary-color, #0b2a3c);">{introHeading}</h2>
+            <slot />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products Range (Optional) -->
+    {products.length > 0 && (
+      <section class="section-padding pt-4 bg-light">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>Available Products & Range</h2>
+          </div>
+          <div class="row g-4 justify-content-center">
+            {products.map((prod: any) => (
+              <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 bg-white overflow-hidden text-center">
+                  {prod.image && (
+                    <div class="card-img-top bg-white d-flex align-items-center justify-content-center p-3 border-bottom" style="height: 190px;">
+                      <img 
+                        src={prod.image} 
+                        alt={prod.name} 
+                        class="img-fluid" 
+                        style="max-height: 100%; max-width: 100%; object-fit: contain; filter: brightness(1.02) contrast(1.02); image-rendering: -webkit-optimize-contrast;" 
+                        onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';"
+                      />
+                    </div>
+                  )}
+                  <div class="card-body p-3 d-flex flex-column justify-content-center">
+                    <h6 class="fw-bold mb-0" style="color: var(--primary-color, #0b2a3c); font-size: 0.95rem;">{prod.name}</h6>
+                    {prod.size && <p class="small fw-medium mt-1 mb-0" style="color: var(--accent-color, #c7a14a);"><i class="fas fa-ruler-combined me-1"></i> Size: {prod.size}</p>}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Key Offerings -->
+    {offerings.length > 0 && (
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-title">
+            <h2>Key Solutions & Capabilities</h2>
+          </div>
+          <div class="row g-4">
+            {offerings.map((offering: any) => (
+              <div class="col-md-6">
+                <div class="d-flex align-items-start">
+                  <i class={`${offering.icon && offering.icon !== 'fas fa-circle' ? offering.icon : 'fas fa-check-circle'} mt-1 me-3`} style="font-size: 1.1rem; color: var(--accent-color, #c7a14a);"></i>
+                  <div>
+                    <h5 class="fw-bold mb-1" style="color: var(--primary-color, #0b2a3c);">{offering.title}</h5>
+                    <p class="text-muted mb-0">{offering.desc}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Typical Applications -->
+    {applications.length > 0 && (
+      <section class="section-padding bg-light">
+        <div class="container">
+          <div class="section-title">
+            <h2>Industry Applications & Use Cases</h2>
+          </div>
+          <div class="row g-4">
+            {applications.map((app: any) => (
+              <div class="col-md-3">
+                <div class="service-card bg-white text-center h-100 rounded shadow-sm p-4">
+                  <div class="service-icon mb-3" style="color: var(--accent-color, #c7a14a); font-size: 2.5rem;">
+                    <i class={`${app.icon || 'fas fa-cog'}`}></i>
+                  </div>
+                  <h4 style="color: var(--primary-color, #0b2a3c); font-weight: 600;">{app.title}</h4>
+                  <p class="small text-muted mb-0">
+                    {app.desc}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Specifications -->
+    {specifications && specifications.items && specifications.items.length > 0 && (
+      <section class="section-padding">
+        <div class="container">
+          <div class="row align-items-center">
+              <div class="col-lg-6">
+                  <h2 class="mb-4 fw-bold" style="color: var(--primary-color, #0b2a3c);">Technical Specifications</h2>
+                  <div class="table-responsive shadow-sm bg-white p-0 rounded overflow-hidden">
+                    <table class="table table-bordered mb-0">
+                      <tbody>
+                        {specifications.items.map((item: any) => (
+                          <tr>
+                            <th class="text-white w-25" style="background-color: var(--primary-color, #0b2a3c) !important;">{item.key}</th>
+                            <td style="color: #333;">{item.value}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+              </div>
+              <div class="col-lg-6 text-center">
+                <div class="bg-white p-3 rounded shadow-sm border d-inline-block w-100">
+                   <img src={specifications.image || introImg} alt="Specifications" class="img-fluid rounded w-100" style="max-height: 380px; object-fit: contain; filter: brightness(1.02) contrast(1.02);" onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';" />
+                </div>
+              </div>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- Compliance & Support -->
+    {compliance.length > 0 && (
+      <section class="section-padding bg-light">
+        <div class="container">
+          <div class="section-title">
+              <h2>Quality Compliance & Support</h2>
+          </div>
+          <div class="row g-4">
+            {compliance.map((comp: any) => (
+              <div class="col-md-3">
+                 <div class="bg-white p-3 rounded shadow-sm h-100 text-center border">
+                    <i class={`${comp.icon || 'fas fa-check'} mb-3 fa-2x`} style="color: var(--accent-color, #c7a14a);"></i>
+                    <h6 class="fw-bold" style="color: var(--primary-color, #0b2a3c);">{comp.title}</h6>
+                    <p class="small text-muted mb-0">{comp.desc}</p>
+                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- CTA Section -->
+    <CtaSection 
+      heading={data.cta?.heading || "Ready to get started?"} 
+      subtext={data.cta?.subtext || "Contact us for a quote"} 
+      buttonText={data.cta?.buttonText || "Request a Quote"} 
+      buttonLink={data.cta?.buttonLink || "/contact"} 
+    />
+</BaseLayout>

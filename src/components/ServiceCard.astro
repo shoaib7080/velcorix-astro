@@ -1,0 +1,40 @@
+---
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+  link?: string;
+  titleLevel?: "h3" | "h4" | "h5";
+  descriptionClass?: string;
+}
+
+const { 
+  icon, 
+  title, 
+  description, 
+  link,
+  titleLevel = "h3",
+  descriptionClass = ""
+} = Astro.props;
+
+const TitleTag = titleLevel;
+---
+{link ? (
+  <a href={link} class="text-decoration-none text-dark">
+    <div class="service-card text-center h-100">
+      <div class="service-icon">
+        <i class={icon}></i>
+      </div>
+      <TitleTag>{title}</TitleTag>
+      <p class={descriptionClass}>{description}</p>
+    </div>
+  </a>
+) : (
+  <div class="service-card text-center h-100">
+    <div class="service-icon">
+      <i class={icon}></i>
+    </div>
+    <TitleTag>{title}</TitleTag>
+    <p class={descriptionClass}>{description}</p>
+  </div>
+)}

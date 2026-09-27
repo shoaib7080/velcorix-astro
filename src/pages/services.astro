@@ -1,0 +1,241 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CtaSection from '../components/CtaSection.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+---
+<BaseLayout title="Our Services - Velcorix" description="Comprehensive industrial services in UAE. Velcorix specializes in EPC, pre-commissioning, flange management, pneumatic testing, and project management for oil & gas and industrial sectors.">
+<!-- Header (Hero) -->
+    <PageHeader 
+      title="Industrial & Mechanical Services" 
+      subtitle="Comprehensive Solutions for Industrial Excellence" 
+      bgImage="images/service/service-8.jpg" 
+    />
+
+    <!-- Intro Section -->
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <p class="lead mb-0">
+          Velcorix offers a diverse portfolio of specialized engineering,
+          project management, and manpower services. From simple installations
+          to complex shutdown management, we deliver precision and safety across
+          the UAE and GCC region.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row">
+          <!-- 1. EPC -->
+          <div class="col-md-4 mb-4">
+            <ServiceCard 
+              icon="fas fa-drafting-compass" 
+              title="EPC Services" 
+              description="End-to-end Engineering, Procurement, and Construction services for industrial projects." 
+              link="/services/epc" 
+            />
+          </div>
+
+          <!-- 2. Oil & Gas Pre-commissioning -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/pre-commissioning"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-vial"></i></div>
+                <h3>Oil & Gas Pre-commissioning</h3>
+                <p>
+                  Comprehensive testing and preparation ensuring systems are
+                  ready for startup.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 3. Shutdown Management -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/shutdown-management"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-power-off"></i></div>
+                <h3>Shutdown Management</h3>
+                <p>
+                  Strategic planning and execution for plant turnarounds and
+                  maintenance outages.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 4. Consultancy & Advisory -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/consultancy-advisory"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-handshake"></i></div>
+                <h3>Consultancy & Advisory</h3>
+                <p>
+                  Expert guidance on operational efficiency, safety compliance,
+                  and project feasibility.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 5. Specialised Services -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/specialised-services"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-oil-well"></i></div>
+                <h3>Specialised Services</h3>
+                <p>
+                  Key sectors including Oil & Gas Upstream/Downstream,
+                  Petrochemical, and Offshore.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 6. Flange Management -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/flange-management"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-ring"></i></div>
+                <h3>Flange Management</h3>
+                <p>
+                  Integrated bolting solutions: Torqueing, Tensioning,
+                  Machining, and Joint Integrity.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 7. Specialised Manpower -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/specialised-manpower"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-users-cog"></i></div>
+                <h3>Specialised Manpower</h3>
+                <p>
+                  Skilled workforce for Shutdowns, Pre-commissioning, Lifting,
+                  and HVAC projects.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 8. Pneumatic Testing -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/pneumatic-testing"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-wind"></i></div>
+                <h3>Pneumatic Testing</h3>
+                <p>
+                  Air and nitrogen pressure testing for sensitive piping and
+                  vessel systems.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 9. Hot Tapping -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/hot-tapping"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-fire"></i></div>
+                <h3>Hot Tapping</h3>
+                <p>
+                  Safe pipeline intervention and branching without system
+                  shutdown.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 10. Project Management -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/project-management"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-tasks"></i></div>
+                <h3>Project Management</h3>
+                <p>
+                  Dedicated oversight to ensure projects are delivered on time
+                  and within budget.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 11. Engineering Construction -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/engg-construction"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+                <h3>Engineering Construction</h3>
+                <p>
+                  Civil and mechanical construction services for industrial
+                  infrastructure.
+                </p>
+              </div>
+            </a>
+          </div>
+
+          <!-- 12. Crane Installation -->
+          <div class="col-md-4 mb-4">
+            <a
+              href="/services/crane-installation"
+              class="text-decoration-none text-dark"
+            >
+              <div class="service-card text-center h-100">
+                <div class="service-icon"><i class="fas fa-crutch"></i></div>
+                <h3>Crane Installation</h3>
+                <p>
+                  Expert erection, dismantling, and maintenance of Tower and EOT
+                  cranes.
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <CtaSection 
+      heading="Need a Tailored Solution?" 
+      subtext="Contact our engineering team to discuss your specific project requirements." 
+      buttonText="Contact Us" 
+      buttonLink="/contact" 
+    />
+
+    <!-- Footer -->
+</BaseLayout>
+

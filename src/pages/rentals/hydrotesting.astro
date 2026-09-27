@@ -1,0 +1,65 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Hydrotesting Equipment - Velcorix Rentals",
+  metaDesc: "Complete solutions for pressure testing and validation in UAE. Velcorix provides certified hydrotesting pumps, chart recorders, and accessories.",
+  header: {
+    title: "Hydrotesting Equipment",
+    subtitle: "Complete solutions for pressure testing and validation",
+    bgImage: "/assets/images/rentals/hydrotest-2.jpg"
+  },
+  intro: {
+    image: "/assets/images/rentals/hydrotest-3.jpg",
+    imageAlt: "Hydrotesting Equipment",
+    heading: "Precision Pressure Testing"
+  },
+  offerings: [
+    { title: "High Pressure Pumps", desc: "Diesel and air-driven units up to 30,000 PSI", icon: "fas fa-circle" },
+    { title: "Chart Recorders", desc: "Barton recorders for accurate pressure logging", icon: "fas fa-circle" },
+    { title: "Dead Weight Testers", desc: "Primary standard for pressure calibration and testing", icon: "fas fa-circle" },
+    { title: "Filling Pumps", desc: "High-volume centrifugal pumps for rapid filling", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Pipeline Testing", desc: "Pre-commissioning validation of oil & gas pipelines.", icon: "fas fa-network-wired" },
+    { title: "Storage Tanks", desc: "Integrity testing of new and repaired storage tanks.", icon: "fas fa-database" },
+    { title: "Pressure Vessels", desc: "Code-compliant testing of boilers and reactors.", icon: "fas fa-flask" },
+    { title: "Valve Testing", desc: "Seat and shell testing of industrial valves.", icon: "fas fa-wrench" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/hydrotest.jpg",
+    items: [
+      { key: "Pressure Range", value: "Up to 30,000 PSI" },
+      { key: "Pump Type", value: "Triplex Plunger / Air Driven Liquid Pump" },
+      { key: "Flow Rate", value: "Variable (High Volume to Low Volume / High Pressure)" },
+      { key: "Recording", value: "Mechanical Chart / Digital Logging" },
+      { key: "Accuracy", value: "Up to 0.1% (with DWT/Digital Gauge)" }
+    ]
+  },
+  compliance: [
+    { title: "Calibrated Equipment", desc: "All gauges and recorders come with current calibration certificates traceable to standards.", icon: "fas fa-shield-alt" },
+    { title: "Complete Skid", desc: "Pumps are skid-mounted with relief valves, manifolds, and hoses ready for site.", icon: "fas fa-truck-loading" },
+    { title: "Technician Support", desc: "Experienced hydrotest technicians available to operate equipment and certify charts.", icon: "fas fa-clipboard-check" },
+    { title: "Safety Accessories", desc: "Includes whip checks, pressure relief valves, and calibrated relief valves.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Test with Confidence",
+    subtext: "Rent certified hydrotesting equipment for your critical pressure tests.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix offers a comprehensive range of certified hydrotesting equipment 
+    suitable for pipelines, pressure vessels, storage tanks, and valves. 
+    Our equipment is calibrated and maintained to ensure accurate test 
+    results for critical infrastructure.
+  </p>
+  <p>
+    From high-volume filling pumps to high-pressure testing units and 
+    precision recording instruments, we provide everything needed for 
+    a successful and compliant hydrotest operation.
+  </p>
+</RentalDetailLayout>

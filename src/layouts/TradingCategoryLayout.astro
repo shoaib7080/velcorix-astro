@@ -1,0 +1,59 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import CtaSection from '../components/CtaSection.astro';
+
+const { categoryData } = Astro.props;
+---
+<BaseLayout title={`${categoryData.title} Trading - Velcorix`} description={categoryData.description}>
+  <PageHeader 
+    title={categoryData.title} 
+    subtitle={categoryData.subtitle} 
+    bgImage={categoryData.image} 
+  />
+
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row mb-5 text-center">
+        <div class="col-lg-8 mx-auto">
+          <h2 class="mb-3 fw-bold" style="color: #1a284c;">Our {categoryData.title} Products</h2>
+          <p class="lead text-muted">{categoryData.description}</p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        {categoryData.products.map((product) => (
+          <div class="col-xl-3 col-lg-4 col-md-6" id={product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}>
+            <div class="card h-100 shadow-sm border-0 product-card">
+              <div class="card-img-top bg-white text-center border-bottom d-flex align-items-center justify-content-center overflow-hidden position-relative p-3" style="height: 200px;">
+                <img src={product.image || '/assets/images/logo/velcorix-logo.png'} class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain; filter: brightness(1.02) contrast(1.02);" alt={product.name} onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';" />
+              </div>
+              <div class="card-body text-center p-3 d-flex flex-column justify-content-center">
+                <h6 class="fw-bold mb-0" style="color: #1a284c;">{product.name}</h6>
+                {product.size && <p class="text-primary small mt-1 mb-0 fw-medium"><i class="fas fa-ruler-combined me-1"></i> Size: {product.size}</p>}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaSection 
+    heading={`Need ${categoryData.title}?`} 
+    subtext="Contact our sales team for bulk pricing and availability." 
+    buttonText="Request a Quote" 
+    buttonLink="/contact" 
+  />
+</BaseLayout>
+
+<style>
+  .product-card {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+  }
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.15)!important;
+  }
+</style>

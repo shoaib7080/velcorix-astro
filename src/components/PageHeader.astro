@@ -1,0 +1,22 @@
+---
+interface Props {
+  title: string;
+  subtitle: string;
+  bgImage: string;
+}
+
+const { title, subtitle, bgImage } = Astro.props;
+---
+<header
+  class="bg-dark text-white text-center py-5"
+  style={`
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("${bgImage}");
+    background-size: cover;
+    background-position: center;
+  `}
+>
+  <div class="container">
+    <h1 class="display-4 fw-bold">{title}</h1>
+    <p class="lead">{subtitle}</p>
+  </div>
+</header>

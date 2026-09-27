@@ -1,0 +1,754 @@
+/* Velcorix Custom Styles */
+
+:root {
+  --primary-color: #0b2a3c; /* Deep Industrial Blue */
+  --secondary-color: #4a5560; /* Steel Gray - Secondary Text/Elements */
+  --accent-color: #c7a14a; /* Safety Orange - Highlights/Buttons */
+  --text-color: #1f2933; /* Charcoal Black */
+  --bg-light: #f5f7fa; /* Industrial Off-White */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-color);
+  background-color: #fff; /* Default white, use bg-light classes where needed */
+  overflow-x: hidden;
+}
+
+/* Bootstrap Overrides to match Theme */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+/* h1, */
+h2,
+h3,
+h4,
+/* h5, */
+h6 {
+  font-family: "Poppins", sans-serif; /* Modern and clean */
+  color: var(--primary-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 15px 0;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+}
+
+.nav-link {
+  color: var(--primary-color) !important;
+  font-weight: 500;
+  margin-left: 15px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--accent-color) !important; /* Revised to Orange */
+}
+
+.btn-primary {
+  background-color: var(--accent-color); /* Revised to Orange */
+  border-color: var(--accent-color);
+  color: #fff;
+  padding: 10px 25px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #d9620d; /* Darker Orange manually or calc? Using hardcoded darker shade for now or opacity */
+  border-color: #d9620d;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+  opacity: 0.75;
+}
+
+/* Hero responsive image layout to avoid CLS */
+.swiper-slide {
+  position: relative;
+  min-height: 60vh;
+  overflow: hidden;
+}
+.hero-picture,
+.hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  height: 80vh;
+  background-color: #000;
+}
+
+.hero-slider .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  /* height: 80vh;  Removed duplicate height decl if relying on parent, but keeping purely for slider logic */
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 42, 60, 0.6); /* Blueish overlay instead of pure black */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Section General */
+.section-padding {
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: var(--accent-color); /* Revised to Orange */
+  margin: 15px auto 0;
+}
+
+/* Services */
+.service-card {
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  border-bottom-color: var(--accent-color); /* Revised to Orange */
+}
+
+.service-icon {
+  font-size: 3rem;
+  color: var(--accent-color); /* Revised to Orange */
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 40px 0 15px;
+}
+
+footer h5 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: var(--accent-color); /* Revised to Orange */
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 25px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Enhanced Dropdown Styling & Desktop Hover */
+.dropdown-menu {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+  margin-top: 10px;
+}
+
+.dropdown-item {
+  color: #555;
+  padding: 8px 20px;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--accent-color);
+  padding-left: 25px; /* Visual slide effect */
+}
+
+.dropdown-menu .dropdown-submenu {
+  min-width: 200px; /* Wider nested menus */
+}
+
+/* What We Do Cards - Background Images */
+.service-card {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 1;
+}
+
+.service-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Why Choose Us Section */
+.bg-cover-desaturated {
+  position: relative;
+  background: #fff;
+}
+
+.bg-cover-desaturated .section-title {
+  background: #fff;
+  padding-bottom: 30px;
+  margin-bottom: 0;
+}
+
+.bg-cover-desaturated .row {
+  position: relative;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 50px 0 20px 0;
+}
+
+.bg-cover-desaturated .row::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.65);
+  z-index: 1;
+}
+
+.bg-cover-desaturated .row > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Industries Cards */
+.industry-card {
+  position: relative;
+  height: 200px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-image: var(--bg-img);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  /* opacity: 0.7; Removed: This fades text too. Use overlay for muting. */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.industry-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 42, 60, 0.6); /* Deep Blue Overlay for 'Muted' look */
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.industry-card:hover {
+  transform: translateY(-5px);
+}
+
+.industry-card:hover::before {
+  background: rgba(11, 42, 60, 0.7); /* Lighter on hover to reveal image more */
+}
+
+.industry-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+}
+
+.industry-content i {
+  color: var(--accent-color);
+  margin-bottom: 15px; /* Added spacing */
+}
+
+/* CTA Revamp */
+.cta-section {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+  z-index: 1;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: url("../../assets/images/hero/DSC_2406.JPG") center/cover fixed
+    no-repeat;
+  filter: blur(8px);
+  z-index: -2;
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(11, 42, 60, 0.75); /* 75% opacity */
+  z-index: -1;
+}
+
+.cta-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.cta-subtext {
+  font-size: 1.1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+}
+
+.trust-anchors {
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  padding-left: 30px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.trust-item i {
+  color: var(--accent-color);
+  margin-right: 15px;
+  font-size: 1.4rem;
+}
+
+.intro-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Footer Divider */
+.footer-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px; /* Reduced from full section height, just a bottom fade */
+  background: linear-gradient(to bottom, transparent, var(--primary-color));
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Footer list item hover effects */
+footer ul li {
+  transition: transform 0.2s ease;
+}
+
+footer ul li:hover {
+  transform: translateX(5px);
+}
+
+footer ul li a:hover {
+  color: var(--accent-color) !important;
+}
+
+/* Desktop Hover Interaction */
+@media (min-width: 992px) {
+  /* Open dropdown on hover automatically */
+  .nav-item.dropdown:hover > .dropdown-menu {
+    display: block;
+    animation: fadeInUp 0.3s ease forwards;
+  }
+
+  /* Position nested menus correctly to the right */
+  .dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 80%;
+    top: 0;
+    margin-top: 0;
+  }
+
+  /* Show nested menu on hover */
+  /* Targeting the LI parent for stable hover */
+  .dropdown-menu li:hover > .dropdown-submenu {
+    display: block;
+    animation: fadeInUp 0.3s ease forwards;
+  }
+
+  /* Ensure parent LI has relative positioning for the absolute submenu */
+  .dropdown-menu li {
+    position: relative;
+  }
+
+  /* Invisible bridge to prevent menu from closing when moving mouse */
+  .nav-item.dropdown:hover > .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 10px;
+  }
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+  /* Navbar mobile adjustments */
+  .navbar {
+    padding: 8px 0;
+  }
+
+  .navbar-brand img {
+    max-height: 35px;
+  }
+
+  .navbar-toggler {
+    padding: 4px 8px;
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    padding: 6px 15px;
+    font-size: 0.85rem;
+  }
+
+  .trust-anchors {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 30px;
+  }
+
+  .dropdown-menu .dropdown-submenu {
+    position: static;
+    display: block;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: none;
+    box-shadow: none;
+  }
+
+  .dropdown-menu {
+    border: none;
+    box-shadow: none;
+    margin-top: 0;
+    padding-top: 0;
+    transform: translateY(0);
+  }
+
+  /* Spacing for stacked columns in Rentals */
+  .intro-image {
+    margin-bottom: 30px;
+  }
+
+  .section-padding .table-responsive {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section,
+  .hero-slider .swiper-slide {
+    height: 40vh; /* Further reduced from 50vh */
+    min-height: 300px; /* Reduced from 400px */
+  }
+
+  .hero-title {
+    font-size: 1.8rem; /* Reduced from 2rem */
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem; /* Reduced from 1rem */
+  }
+
+  .section-padding .row.align-items-center {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .section-padding .row.align-items-center .col-lg-6:first-child {
+    margin-bottom: 0;
+    margin-top: 20px;
+  }
+
+  .section-padding {
+    padding: 30px 0;
+  }
+
+  .section-title {
+    margin-bottom: 20px;
+    padding-bottom: 0px !important; /* Added padding for spacing */
+  }
+
+  .section-title h2 {
+    font-size: 1.6rem; /* Reduced from 1.8rem */
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem !important; /* Reduced from 1.5rem */
+  }
+
+  .service-card {
+    padding: 20px; /* Reduced from 30px */
+  }
+
+  .cta-section {
+    padding: 40px 0; /* Reduced from 60px */
+  }
+
+  .cta-heading {
+    font-size: 1.8rem; /* Reduced from 2rem */
+  }
+
+  .cta-subtext {
+    font-size: 1rem;
+  }
+
+  .intro-image {
+    height: 200px !important; /* Reduced from 250px */
+  }
+
+  .col-lg-6:first-child {
+    margin-bottom: 20px; /* Reduced from 30px */
+  }
+
+  .industry-card {
+    height: 150px; /* Reduced from 200px */
+  }
+
+  .bg-cover-desaturated .row {
+    padding: 20px 0; /* Reduced padding */
+  }
+
+  .list-unstyled li {
+    margin-bottom: 0.5rem !important;
+  }
+
+  /* Our Approach section mobile adjustments */
+  .col-lg-2.col-md-4 {
+    flex: 0 0 50%; /* 2 columns on mobile instead of 6 */
+    max-width: 50%;
+  }
+
+  .col-lg-2.col-md-4 .position-relative {
+    margin-bottom: 20px; /* Reduced spacing */
+  }
+
+  .col-lg-2.col-md-4 .bg-white {
+    width: 60px !important; /* Smaller circles */
+    height: 60px !important;
+  }
+
+  .col-lg-2.col-md-4 .h3 {
+    font-size: 1.5rem !important; /* Smaller numbers */
+  }
+
+  .col-lg-2.col-md-4 h6 {
+    font-size: 0.85rem; /* Smaller text */
+    line-height: 1.2;
+  }
+
+  /* footer  */
+  footer .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  footer .col-lg-3,
+  footer .col-lg-2 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  footer h5 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  footer p,
+  footer a {
+    font-size: 0.85rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-bottom {
+    padding-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section,
+  .hero-slider .swiper-slide {
+    height: 35vh;
+    min-height: 280px;
+  }
+
+  .section-title h2 {
+    font-size: 1.4rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

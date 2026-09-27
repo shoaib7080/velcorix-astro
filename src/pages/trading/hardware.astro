@@ -1,0 +1,98 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Hardware & Fabrication Tools - Velcorix Trading",
+  metaDesc: "Industrial hardware, abrasives, fasteners, anchors, and rigging accessories across the UAE. Velcorix is your trusted supplier for construction and fabrication.",
+  header: {
+    title: "Hardware & Tools",
+    subtitle: "Comprehensive Hardware, Abrasives & Rigging Supplies",
+    bgImage: "/assets/images/trading/hardware1.png"
+  },
+  intro: {
+    image: "/assets/images/trading/hardware1.png",
+    imageAlt: "Hardware & Tools",
+    heading: "Heavy-Duty Industrial Hardware & Fasteners"
+  },
+  products: [
+    { name: "WD-40", desc: "Multi-use lubricant and rust preventer spray." },
+    { name: "Flap disc 4.5\" SS & CS", desc: "Premium grinding and finishing flap discs for SS and CS." },
+    { name: "Flap disc 7\" SS & CS", desc: "Heavy-duty 7-inch flap discs for weld removal and surface finishing." },
+    { name: "Cup brush SS & CS", desc: "Wire cup brushes for angle grinders." },
+    { name: "Wire brush SS & CS", desc: "Hand wire brushes with stainless steel and carbon steel bristles." },
+    { name: "Fiber Disc 7\"", desc: "Heavy-duty resin fiber grinding discs." },
+    { name: "Cutting Disc 1.6mm 4.5\" CS", desc: "Thin cutting disc 1.6mm thickness for 4.5\" CS." },
+    { name: "Cutting Disc 1.6mm 4.4\" SS", desc: "Thin cutting disc 1.6mm thickness for 4.5\" SS." },
+    { name: "Cutting Disc 3 mm 7\" CS", desc: "Heavy-duty 3mm cutting disc for 7\" CS." },
+    { name: "Cutting Disc 3 mm 7\" SS", desc: "Heavy-duty 3mm cutting disc for 7\" SS." },
+    { name: "Cutting Disc 1.6mm 7\" CS", desc: "Precision 1.6mm cutting disc for 7\" CS." },
+    { name: "Cutting Disc 1.6mm 7\" SS", desc: "Precision 1.6mm cutting disc for 7\" SS." },
+    { name: "Paint remover 3.6 L", desc: "Industrial paint remover 3.6L can." },
+    { name: "Hexa blade yellow colour", desc: "Heavy-duty hacksaw replacement blades." },
+    { name: "Knife blade", desc: "Utility snap-off and trapezoid knife blades." },
+    { name: "Loctite Paste 567", desc: "Thread sealant paste for high-pressure pipe fittings." },
+    { name: "Paint marker black & white", desc: "Industrial permanent oil-based paint markers." },
+    { name: "AG 4.5 cutting wheel 3mm for SS", desc: "Specialized 3mm cutting wheel for SS." },
+    { name: "AG 4.5 cutting wheel 1mm", desc: "Ultra-thin 1mm cutting wheel for fast metal slicing." },
+    { name: "AG 7 cutting wheel 3mm for SS", desc: "Large 7\" 3mm cutting wheel for SS." },
+    { name: "Spirit Level 12\"", desc: "Precision 12-inch magnetic spirit level." },
+    { name: "Spirit Level 18\"", desc: "Precision 18-inch magnetic spirit level." },
+    { name: "Spirit Level 1 Mtr", desc: "Precision 1-meter magnetic spirit level." },
+    { name: "Right Angle 12\"", desc: "Stainless steel 12-inch try square." },
+    { name: "Right Angle 18\"", desc: "Stainless steel 18-inch try square." },
+    { name: "Clear Tape Size 2\"", desc: "Heavy-duty 2-inch clear packaging tape." },
+    { name: "Nylon Rope 8MM", desc: "Braided high-tensile 8mm nylon rope." },
+    { name: "Warning Tape (blue white)", desc: "Non-adhesive safety barrier tape." },
+    { name: "Jubilee Clamp 1/2\"", desc: "Stainless steel worm-drive hose clamps." },
+    { name: "Paint Spray (Orange, White, Blue, Green)", desc: "Quick-drying aerosol spray paints." },
+    { name: "AG 4.5 Grinder 110V", desc: "Heavy-duty 4.5\" 110V angle grinder machine." },
+    { name: "AG 7 Makita Model No-GA7050B, Carbon No-203", desc: "Heavy-duty 7\" 2300W angle grinder." },
+    { name: "Angle grinder AG 4.5 Dewalt Carbon (For Repair)", desc: "Replacement carbon brush for Dewalt 4.5\" grinders." },
+    { name: "COCO Brush + Handle 12\"", desc: "Natural coconut fiber sweeping brush with handle." },
+    { name: "MOLYKOTE 1000", desc: "Anti-seize paste for high-temperature bolted joints." },
+    { name: "COPPER GREASE", desc: "High-temperature copper anti-seize lubricant paste." },
+    { name: "LOCTITE 401", desc: "Instant high-strength cyanoacrylate adhesive." }
+  ],
+  offerings: [
+    { title: "Cutting & Grinding Abrasives", desc: "Premium abrasive discs engineered for stainless steel and carbon steel cutting.", icon: "fas fa-circle" },
+    { title: "Fastening Solutions", desc: "High-tensile bolts, nuts, washers, and chemical anchors.", icon: "fas fa-circle" },
+    { title: "Rigging & Lifting Tackle", desc: "Shackles, hooks, turnbuckles, and grade 80 lifting chains.", icon: "fas fa-circle" },
+    { title: "Structural Clamps", desc: "Beam clamps, pipe hangers, and toggle clamps for secure mounting.", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Construction", desc: "Heavy steel erection and site structural assembly.", icon: "fas fa-building" },
+    { title: "Manufacturing", desc: "Workshop fabrication and mechanical maintenance.", icon: "fas fa-industry" },
+    { title: "Shipyards", desc: "Vessel repairs and heavy rigging operations.", icon: "fas fa-ship" },
+    { title: "Oil & Gas", desc: "Offshore and onshore facility hardware supply.", icon: "fas fa-oil-can" }
+  ],
+  specifications: {
+    image: "/assets/images/trading/hardware1.png",
+    items: [
+      { key: "Material Grade", value: "Carbon Steel, Stainless Steel (SS304 / SS316), Alloy Steel" },
+      { key: "Compliance", value: "ISO 9001, DIN, ASME / ANSI Standards" },
+      { key: "Surface Finish", value: "Zinc Plated, Hot-Dip Galvanized, Black Oxide" },
+      { key: "Supply Capacity", value: "Wholesale & Retail Bulk Dispatch across UAE" }
+    ]
+  },
+  compliance: [
+    { title: "Mill Test Certificates", desc: "Full traceability and test reports provided for all hardware.", icon: "fas fa-certificate" },
+    { title: "Quality Assurance", desc: "Sourced exclusively from approved ISO certified manufacturers.", icon: "fas fa-shield-alt" },
+    { title: "Express Delivery", desc: "Rapid dispatch to Dubai, Abu Dhabi, and DIC industrial zones.", icon: "fas fa-truck" },
+    { title: "Technical Selection", desc: "Assistance with load ratings, torque values, and sizing.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Need Industrial Hardware?",
+    subtext: "Contact our sales team for bulk pricing and immediate stock availability.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix is a premier supplier of high-performance industrial hardware, abrasives, fasteners, and workshop tools across the UAE. We provide essential mechanical components engineered to withstand extreme site conditions across heavy construction, manufacturing, marine shipyards, and oil & gas operations.
+  </p>
+  <p>
+    From high-tensile bolts, anchors, and structural clamps to precision cutting wheels, flap discs, and specialty lubricants, our comprehensive inventory guarantees full compliance with international ISO, DIN, and ANSI quality standards. We offer rapid bulk dispatch across Dubai, Abu Dhabi, and DIC industrial zones.
+  </p>
+</RentalDetailLayout>

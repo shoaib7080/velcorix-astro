@@ -1,0 +1,65 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Earth Moving Equipment - Velcorix Rentals",
+  metaDesc: "Reliable machinery for construction and mining projects in UAE. Velcorix provides excavators, wheel loaders, bulldozers, and backhoes.",
+  header: {
+    title: "Earth Moving Equipment",
+    subtitle: "Reliable machinery for construction and mining projects",
+    bgImage: "/assets/images/rentals/heavy-earth-mover.jpg"
+  },
+  intro: {
+    image: "/assets/images/rentals/heavy-earth-mover-2.jpg",
+    imageAlt: "Earth Moving Equipment",
+    heading: "Construction Machinery Fleet"
+  },
+  offerings: [
+    { title: "Excavators", desc: "From mini excavators to 80-ton heavy diggers", icon: "fas fa-circle" },
+    { title: "Wheel Loaders", desc: "High-capacity buckets for material loading", icon: "fas fa-circle" },
+    { title: "Bulldozers", desc: "Powerful dozers for leveling and grading", icon: "fas fa-circle" },
+    { title: "Backhoes & Dumpers", desc: "Versatile machiness for general site works", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Infrastructure", desc: "Road building and civil engineering works.", icon: "fas fa-road" },
+    { title: "Construction", desc: "Foundation excavation and site preparation.", icon: "fas fa-building" },
+    { title: "Mining", desc: "Overburden removal and mineral extraction.", icon: "fas fa-gem" },
+    { title: "Quarrying", desc: "Aggregates handling and stockpile management.", icon: "fas fa-truck-monster" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/heavy-earth-mover-3.webp",
+    items: [
+      { key: "Operating Weight", value: "2 Tons - 80 Tons" },
+      { key: "Bucket Capacity", value: "0.5m³ - 5.0m³" },
+      { key: "Reach Depth", value: "Up to 18 meters (Long Reach)" },
+      { key: "Engine Power", value: "50HP - 500HP" },
+      { key: "Attachments", value: "Breaker, Auger, Grapple, Crusher Bucket" }
+    ]
+  },
+  compliance: [
+    { title: "Certified Machinery", desc: "All machines inspected and third-party certified for safety.", icon: "fas fa-shield-alt" },
+    { title: "Certified Drivers", desc: "Supplied with experienced, licensed operators.", icon: "fas fa-truck-loading" },
+    { title: "24/7 Field Maintenance", desc: "Mobile workshops to perform on-site repairs.", icon: "fas fa-clipboard-check" },
+    { title: "Fuel Management", desc: "Optional fuel supply arrangements for remote sites.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Move Earth Efficiently",
+    subtext: "Rent heavy earth moving equipment tailored to your project requirements.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix offers a modern fleet of heavy earth moving equipment to
+    support infrastructure, construction, and mining projects across
+    the region. Our machines are maintained to manufacturer standards
+    for maximum uptime.
+  </p>
+  <p>
+    From site preparation to excavation and material handling, we
+    supply powerful and fuel-efficient machinery operated by
+    experienced certified drivers.
+  </p>
+</RentalDetailLayout>

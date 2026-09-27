@@ -1,0 +1,12 @@
+.env
+.env.local
+.env*.local
+.vercel
+node_modules/
+
+# Editor settings — local to each machine, not the project
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db

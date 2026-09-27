@@ -1,0 +1,65 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Binder Pullers - Velcorix Rentals",
+  metaDesc: "Safe and efficient tube bundle extraction solutions in UAE. Velcorix provides aerial, truck-mounted, and slab-mounted binder pullers.",
+  header: {
+    title: "Binder Pullers",
+    subtitle: "Safe and efficient tube bundle extraction solutions",
+    bgImage: "/assets/images/rentals/binder-2.jpg"
+  },
+  intro: {
+    image: "/assets/images/rentals/binder-3.jpeg",
+    imageAlt: "Binder Pullers",
+    heading: "Heavy Duty Extraction Power"
+  },
+  offerings: [
+    { title: "Aerial Bundle Extractors", desc: "Self-balancing units for crane-assisted extraction", icon: "fas fa-circle" },
+    { title: "Truck Mounted Pullers", desc: "Self-propelled units for ground-level access", icon: "fas fa-circle" },
+    { title: "Slab Mounted Units", desc: "Compact pullers for tight spaces", icon: "fas fa-circle" },
+    { title: "Tube Bundle Carriers", desc: "Safe transport of bundles within the plant", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Turnarounds", desc: "Rapid extraction during time-critical shutdowns.", icon: "fas fa-clock" },
+    { title: "Elevation Work", desc: "Extracting bundles from high columns and structures.", icon: "fas fa-arrow-up" },
+    { title: "Bundle Replacement", desc: "Installing new bundles with precision alignment.", icon: "fas fa-cogs" },
+    { title: "Maintenance", desc: "Removing bundles for cleaning and inspection.", icon: "fas fa-hard-hat" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/binder.png",
+    items: [
+      { key: "Pulling Capacity", value: "Up to 65 Tons" },
+      { key: "Bundle Length", value: "Max 12.5 meters" },
+      { key: "Bundle Diameter", value: "Up to 3,000 mm" },
+      { key: "Weight Capacity", value: "Up to 50 Tons" },
+      { key: "Drive System", value: "Hydraulic (Diesel Engine Driven)" }
+    ]
+  },
+  compliance: [
+    { title: "Certified Equipment", desc: "All lifting and pulling gear is third-party certified for safety.", icon: "fas fa-check-circle" },
+    { title: "Experienced Crew", desc: "Experienced operators available to perform extraction safely.", icon: "fas fa-user-check" },
+    { title: "Rapid Mobilization", desc: "Quick dispatch to support emergency shutdown operations.", icon: "fas fa-truck-loading" },
+    { title: "Turnkey Service", desc: "Complete service including rigging, extraction, and transport.", icon: "fas fa-tools" }
+  ],
+  cta: {
+    heading: "Extract Bundles Safely",
+    subtext: "Contact us for binder puller rentals and extraction services.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix provides high-capacity binder pullers designed to safely
+    extract and re-insert heat exchanger tube bundles. Our equipment
+    eliminates the need for manual handling, significantly reducing
+    turnaround time and improving safety.
+  </p>
+  <p>
+    Whether you need aerial extractors for elevated exchangers or
+    truck-mounted units for ease of mobility, we have the right
+    solution for your maintenance project.
+  </p>
+</RentalDetailLayout>

@@ -1,0 +1,67 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "Office & Site Stationery - Velcorix Trading",
+  metaDesc: "Comprehensive stationery and office supplies for field offices, construction sites, and corporate headquarters in UAE.",
+  header: {
+    title: "Office & Site Stationery",
+    subtitle: "Full-Spectrum Field Stationery & Corporate Office Essentials",
+    bgImage: "/assets/images/trading/sta1.png"
+  },
+  intro: {
+    image: "/assets/images/trading/sta1.png",
+    imageAlt: "Office & Site Stationery",
+    heading: "Complete Site & Commercial Office Supplies"
+  },
+  products: [
+    { name: "Paper Products", image: "/assets/images/products/STATIONERY/paper.png", desc: "A4/A3 printing paper, engineering plotting rolls, logbooks, and pads." },
+    { name: "Files & Folders", image: "/assets/images/products/STATIONERY/folder.png", desc: "Heavy-duty lever arch files, box files, document wallets, and ring binders." },
+    { name: "Writing Instruments", image: "/assets/images/products/STATIONERY/writing.jpg", desc: "Industrial permanent markers, highlighters, ballpoint pens, and pencils." },
+    { name: "Desk Accessories", image: "/assets/images/products/STATIONERY/desk.png", desc: "Organizers, staplers, punchers, tape dispensers, and scissors." },
+    { name: "Office Essentials", image: "/assets/images/products/STATIONERY/office.png", desc: "Tapes, sticky notes, calculators, and administrative supplies." },
+    { name: "General Stationery", image: "/assets/images/products/STATIONERY/GENERAL.png", desc: "Complete daily supplies for site cabins and corporate operations." }
+  ],
+  offerings: [
+    { title: "Paper & Plotting Rolls", desc: "High-whiteness A4/A3 printing paper and wide-format engineering plot paper.", icon: "fas fa-circle" },
+    { title: "Filing Systems", desc: "Heavy-duty lever arch files, box files, and document wallets for audit archiving.", icon: "fas fa-circle" },
+    { title: "Writing & Marking", desc: "Industrial markers, permanent pens, highlighters, and technical pencils.", icon: "fas fa-circle" },
+    { title: "Office Machinery", desc: "Shredders, laminators, binding machines, and heavy-duty staplers.", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Site Compounds", desc: "Supporting field offices and site engineers during construction.", icon: "fas fa-campground" },
+    { title: "Corporate Offices", desc: "Daily administrative office supplies and documentation.", icon: "fas fa-building" },
+    { title: "Document Control", desc: "QA/QC file storage and audit compliance archiving.", icon: "fas fa-file-contract" },
+    { title: "Training Centers", desc: "Bulk stationery supply for training centers and institutes.", icon: "fas fa-graduation-cap" }
+  ],
+  specifications: {
+    image: "/assets/images/trading/sta1.png",
+    items: [
+      { key: "Paper Weight", value: "70 GSM, 75 GSM, 80 GSM, 100 GSM" },
+      { key: "Filing Types", value: "Lever Arch, Ring Binders, Box Files, Pocket Folders" },
+      { key: "Eco Standards", value: "FSC Certified recycled and sustainably sourced paper" },
+      { key: "Packaging", value: "Bulk cartons for site compounds and corporate orders" }
+    ]
+  },
+  compliance: [
+    { title: "Environment Friendly", desc: "Sourced from eco-certified paper manufacturers.", icon: "fas fa-leaf" },
+    { title: "Bulk Availability", desc: "Stocked in high volumes for immediate bulk site dispatch.", icon: "fas fa-truck-moving" },
+    { title: "Customized Kits", desc: "Tailored site starter stationery packages for new compounds.", icon: "fas fa-box" },
+    { title: "On-Time Logistics", desc: "Reliable scheduled delivery across all Emirates.", icon: "fas fa-clock" }
+  ],
+  cta: {
+    heading: "Order Office & Site Supplies",
+    subtext: "Contact us for customized bulk stationery deliveries for your office or site compound.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix delivers complete administrative, technical, and site cabin stationery solutions tailored for construction compounds, engineering offices, and corporate headquarters throughout the UAE.
+  </p>
+  <p>
+    Our supply range encompasses FSC-certified printing paper, wide-format engineering plot rolls, heavy-duty lever arch filing systems, QA/QC documentation binders, and durable writing instruments. We keep field offices fully equipped for uninterrupted site administration, audit compliance, and document management.
+  </p>
+</RentalDetailLayout>

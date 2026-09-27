@@ -1,0 +1,601 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaSection from '../components/CtaSection.astro';
+---
+<BaseLayout title="Velcorix - Mechanical Trading & Consultancy" description="Velcorix is a premier mechanical trading and consultancy firm in UAE, providing expert oil & gas services, industrial equipment rentals, shutdown management, and EPC advisory.">
+  <!-- Hero Slider Section -->
+  <section class="hero-section">
+    <div class="swiper hero-slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <picture class="hero-picture">
+            <source
+              type="image/avif"
+              srcset="
+                /assets/images/hero/optimized/DSC_2307-800.avif   800w,
+                /assets/images/hero/optimized/DSC_2307-1200.avif 1200w,
+                /assets/images/hero/optimized/DSC_2307-1920.avif 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/optimized/DSC_2307-800.webp   800w,
+                /assets/images/hero/optimized/DSC_2307-1200.webp 1200w,
+                /assets/images/hero/optimized/DSC_2307-1920.webp 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+            <img
+              class="hero-img"
+              src="/assets/images/hero/optimized/DSC_2307-1200.jpg"
+              srcset="
+                /assets/images/hero/optimized/DSC_2307-800.jpg   800w,
+                /assets/images/hero/optimized/DSC_2307-1200.jpg 1200w,
+                /assets/images/hero/optimized/DSC_2307-1920.jpg 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+              alt="A Partner You Can Rely On"
+              width="1920"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <h2 class="hero-title text-white">A Partner You Can Rely On</h2>
+            <p class="hero-subtitle">
+              Responsive, compliant, and technically driven support.
+            </p>
+            <a href="/contact" class="btn btn-primary btn-lg">Get in Touch</a>
+          </div>
+        </div>
+
+        <!-- Slide 1 (LCP - eager + preload) -->
+        <div class="swiper-slide">
+          <picture class="hero-picture">
+            <source
+              type="image/avif"
+              srcset="
+                /assets/images/hero/optimized/DSC_2319-800.avif   800w,
+                /assets/images/hero/optimized/DSC_2319-1200.avif 1200w,
+                /assets/images/hero/optimized/DSC_2319-1920.avif 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/optimized/DSC_2319-800.webp   800w,
+                /assets/images/hero/optimized/DSC_2319-1200.webp 1200w,
+                /assets/images/hero/optimized/DSC_2319-1920.webp 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+            <img
+              class="hero-img"
+              src="/assets/images/hero/optimized/DSC_2319-1200.jpg"
+              srcset="
+                /assets/images/hero/optimized/DSC_2319-800.jpg   800w,
+                /assets/images/hero/optimized/DSC_2319-1200.jpg 1200w,
+                /assets/images/hero/optimized/DSC_2319-1920.jpg 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+              alt="End-to-End Oil & Gas Consultancy Services"
+              width="1920"
+              height="900"
+              loading="eager"
+              decoding="async"
+            />
+          </picture>
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <h1 class="hero-title">
+              End-to-End Oil & Gas Consultancy Services
+            </h1>
+            <p class="hero-subtitle">
+              From shutdown planning to EPC advisory and pre-commissioning support.
+            </p>
+            <a href="/services" class="btn btn-primary btn-lg">Explore our Services</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <picture class="hero-picture">
+            <source
+              type="image/avif"
+              srcset="
+                /assets/images/hero/optimized/DSC_2311-800.avif   800w,
+                /assets/images/hero/optimized/DSC_2311-1200.avif 1200w,
+                /assets/images/hero/optimized/DSC_2311-1920.avif 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/optimized/DSC_2311-800.webp   800w,
+                /assets/images/hero/optimized/DSC_2311-1200.webp 1200w,
+                /assets/images/hero/optimized/DSC_2311-1920.webp 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+            />
+            <img
+              class="hero-img"
+              src="/assets/images/hero/optimized/DSC_2311-1200.jpg"
+              srcset="
+                /assets/images/hero/optimized/DSC_2311-800.jpg   800w,
+                /assets/images/hero/optimized/DSC_2311-1200.jpg 1200w,
+                /assets/images/hero/optimized/DSC_2311-1920.jpg 1920w
+              "
+              sizes="(max-width: 768px) 100vw, 1200px"
+              alt="Reliable Equipment & Tool Rentals"
+              width="1920"
+              height="900"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <div class="hero-overlay"></div>
+          <div class="container hero-content">
+            <h2 class="hero-title text-white">
+              Reliable Equipment & Tool Rentals for Critical Operations
+            </h2>
+            <p class="hero-subtitle">
+              Certified, well-maintained assets ready for onshore and offshore projects.
+            </p>
+            <a href="/rentals" class="btn btn-primary btn-lg">View Rental Solutions</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- About Teaser Section -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/optimized/DSC_2345-800.webp   800w,
+                /assets/images/hero/optimized/DSC_2345-1200.webp 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 600px"
+            />
+            <img
+              src="/assets/images/hero/optimized/DSC_2345-800.jpg"
+              alt="Premier Mechanical Services in UAE"
+              class="img-fluid rounded shadow"
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </div>
+        <div class="col-lg-6">
+          <h4 class="text-uppercase text-secondary mb-2">
+            Premier Mechanical Services in UAE
+          </h4>
+          <p class="mb-4">
+            Velcorix is a technical consultancy and equipment rental company
+            serving the oil and gas, energy, and industrial sectors. We
+            support operators, EPC contractors, and service providers with
+            specialized expertise across project execution, shutdowns,
+            commissioning, and asset integrity—backed by reliable rental
+            solutions for critical site operations globally and across the
+            UAE.
+          </p>
+          <ul class="list-unstyled mb-4">
+            <li class="mb-2">
+              <i class="fas fa-check-circle text-primary me-2"></i> Quality Assurance
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-check-circle text-primary me-2"></i> Expert Engineering Team
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-check-circle text-primary me-2"></i> Timely Delivery
+            </li>
+          </ul>
+          <a href="/about" class="btn btn-outline-dark">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2>What We Do</h2>
+        <p>Comprehensive solutions for your industrial requirements</p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 mb-4">
+          <div
+            class="service-card h-100"
+            style="--bg-img: url('/assets/images/services/DSC_2341.JPG');"
+          >
+            <div class="text-center">
+              <div class="service-icon">
+                <i class="fas fa-user-tie"></i>
+              </div>
+              <h3>Engineering & Consultancy Services</h3>
+            </div>
+            <ul class="list-unstyled mt-3 ps-3">
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Shutdown & Turnaround Management
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Flange Management & Bolt Integrity
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>EPC & Project Advisory
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Pre-Commissioning & Commissioning Support
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Asset Integrity & Maintenance Planning
+              </li>
+            </ul>
+            <div class="text-center mt-4">
+              <a href="/services" class="btn btn-outline-primary fw-bold">Explore Consultancy</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div
+            class="service-card h-100"
+            style="--bg-img: url('/assets/images/services/DSC_2454.JPG');"
+          >
+            <div class="text-center">
+              <div class="service-icon">
+                <i class="fas fa-tools"></i>
+              </div>
+              <h3>Certified Equipment & Rental Solutions</h3>
+            </div>
+            <ul class="list-unstyled mt-3 ps-3">
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Hydraulic Tools & Bolt Tensioning Equipment
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Lifting & Material Handling Equipment
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Testing & Commissioning Kits
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Site Machinery & Temporary Utilities
+              </li>
+              <li class="mb-2">
+                <i class="fas fa-check text-primary me-2"></i>Specialized Tools on Request
+              </li>
+            </ul>
+            <div class="text-center mt-4">
+              <a href="/rentals" class="btn btn-outline-primary fw-bold">View Rental Catalog</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Velcorix Section -->
+  <section
+    class="section-padding bg-cover-desaturated"
+    style="--bg-img: url('/assets/images/services/DSC_2545.JPG');"
+  >
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose Velcorix</h2>
+        <p>Commitment to Excellence and Reliability</p>
+      </div>
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold">Proven Experience</h5>
+                  <p class="text-muted small">
+                    Proven experience in live plant and shutdown environments.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold">Field-Driven</h5>
+                  <p class="text-muted small">
+                    Practical, field-driven consultancy—not just reports.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold">Rapid Response</h5>
+                  <p class="text-muted small">
+                    Rapid mobilization and responsive support.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold">Quality Equipment</h5>
+                  <p class="text-muted small">
+                    Well-maintained, certified rental equipment.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold">Safety First</h5>
+                  <p class="text-muted small">
+                    Safety and compliance as standard practice.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 mb-4">
+              <div class="d-flex align-items-start">
+                <div class="me-3 text-primary">
+                  <i class="fas fa-check-circle fa-2x"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold">Accountability</h5>
+                  <p class="text-muted small">
+                    Single-point accountability for services and rentals.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries We Serve Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-title">
+        <h2>Industries We Serve</h2>
+        <p>Supporting critical sectors with specialized expertise</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4 mb-4">
+          <div
+            class="industry-card"
+            style="--bg-img: url('/assets/images/services/DSC_2341.JPG');"
+          >
+            <div class="industry-content">
+              <i class="fas fa-oil-can fa-3x mb-3"></i>
+              <h5>Oil & Gas</h5>
+              <p class="small mb-0">Upstream / Midstream / Downstream</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div
+            class="industry-card"
+            style="--bg-img: url('/assets/images/services/DSC_2558.JPG');"
+          >
+            <div class="industry-content">
+              <i class="fas fa-industry fa-3x mb-3"></i>
+              <h5>Petrochemicals</h5>
+              <p class="small mb-0">Petrochemical & Chemical Plants</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div
+            class="industry-card"
+            style="--bg-img: url('/assets/images/services/DSC_2510.JPG');"
+          >
+            <div class="industry-content">
+              <i class="fas fa-bolt fa-3x mb-3"></i>
+              <h5>Power & Energy</h5>
+              <p class="small mb-0">Power Generation & Distribution</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div
+            class="industry-card"
+            style="--bg-img: url('/assets/images/services/DSC_2470.JPG');"
+          >
+            <div class="industry-content">
+              <i class="fas fa-cogs fa-3x mb-3"></i>
+              <h5>Manufacturing</h5>
+              <p class="small mb-0">Industrial Manufacturing & Processing</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4">
+          <div
+            class="industry-card"
+            style="--bg-img: url('/assets/images/services/DSC_2456.JPG');"
+          >
+            <div class="industry-content">
+              <i class="fas fa-hard-hat fa-3x mb-3"></i>
+              <h5>EPC & Turnkey</h5>
+              <p class="small mb-0">
+                Engineering, Procurement & Construction
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach Section -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Approach</h2>
+        <p>A structured pathway to project success</p>
+      </div>
+      <div class="row text-center">
+        <div class="col-lg-2 col-md-4 mb-4">
+          <div class="position-relative">
+            <div
+              class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center mx-auto mb-3"
+              style="width: 80px; height: 80px"
+            >
+              <span class="h3 text-primary mb-0">1</span>
+            </div>
+            <h6>Requirement Understanding</h6>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <div class="position-relative">
+            <div
+              class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center mx-auto mb-3"
+              style="width: 80px; height: 80px"
+            >
+              <span class="h3 text-primary mb-0">2</span>
+            </div>
+            <h6>Technical Evaluation</h6>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <div class="position-relative">
+            <div
+              class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center mx-auto mb-3"
+              style="width: 80px; height: 80px"
+            >
+              <span class="h3 text-primary mb-0">3</span>
+            </div>
+            <h6>Solution Planning</h6>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <div class="position-relative">
+            <div
+              class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center mx-auto mb-3"
+              style="width: 80px; height: 80px"
+            >
+              <span class="h3 text-primary mb-0">4</span>
+            </div>
+            <h6>Deployment & Execution</h6>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <div class="position-relative">
+            <div
+              class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center mx-auto mb-3"
+              style="width: 80px; height: 80px"
+            >
+              <span class="h3 text-primary mb-0">5</span>
+            </div>
+            <h6>Ongoing Support</h6>
+          </div>
+        </div>
+        <div class="col-lg-2 col-md-4 mb-4">
+          <div class="position-relative">
+            <div
+              class="bg-white rounded-circle shadow d-flex align-items-center justify-content-center mx-auto mb-3"
+              style="width: 80px; height: 80px"
+            >
+              <span class="h3 text-primary mb-0">6</span>
+            </div>
+            <h6>Project Closure</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Safety, Quality & Compliance Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="
+                /assets/images/hero/optimized/DSC_2406-800.webp   800w,
+                /assets/images/hero/optimized/DSC_2406-1200.webp 1200w
+              "
+              sizes="(max-width: 768px) 100vw, 600px"
+            />
+            <img
+              src="/assets/images/hero/optimized/DSC_2406-800.jpg"
+              alt="Safety and Quality"
+              class="img-fluid rounded shadow"
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-4">Safety, Quality & Compliance</h2>
+          <p class="lead mb-4">
+            Velcorix operates with a strong focus on safety, quality, and
+            industry compliance.
+          </p>
+          <p class="mb-4">
+            Our services and equipment are aligned with applicable
+            international standards and best practices to ensure safe and
+            efficient project execution.
+          </p>
+          <ul class="list-unstyled">
+            <li class="mb-2">
+              <i class="fas fa-shield-alt text-primary me-2"></i>HSE-first mindset
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-check-double text-primary me-2"></i>Certified tools and equipment
+            </li>
+            <li class="mb-2">
+              <i class="fas fa-file-contract text-primary me-2"></i>Documentation and traceability
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <CtaSection 
+    heading="Ready to Optimize Your Operations?" 
+    subtext="Consulting and rental solutions engineered for critical industrial environments." 
+    buttonText="Request a Consultation" 
+    buttonLink="/contact" 
+  />
+</BaseLayout>

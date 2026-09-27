@@ -1,0 +1,65 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "5kW Solar Power Kit - Velcorix Rentals",
+  metaDesc: "Portable and efficient renewable energy solutions in UAE. Velcorix provides 5kW solar power kits for off-grid sites and backup power.",
+  header: {
+    title: "5kW Solar Power Kit",
+    subtitle: "Portable and efficient renewable energy solutions",
+    bgImage: "/assets/images/rentals/solar.jpg"
+  },
+  intro: {
+    image: "/assets/images/rentals/solar5kw.jpg",
+    imageAlt: "5kW Solar Kit",
+    heading: "Sustainable Power Solution"
+  },
+  offerings: [
+    { title: "High Efficiency Panels", desc: "Monocrystalline modules for maximum output", icon: "fas fa-circle" },
+    { title: "Hybrid Inverter", desc: "Smart inverter managing solar and battery power", icon: "fas fa-circle" },
+    { title: "Battery Storage", desc: "Reliable backup for night-time operation", icon: "fas fa-circle" },
+    { title: "Plug & Play", desc: "Pre-wired components for quick setup", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Site Offices", desc: "Powering lights, computers, and AC units.", icon: "fas fa-home" },
+    { title: "Telecom", desc: "Reliable power for remote communication towers.", icon: "fas fa-broadcast-tower" },
+    { title: "Remote Camps", desc: "Electricity for staff accommodation in off-grid areas.", icon: "fas fa-campground" },
+    { title: "Backup Power", desc: "Emergency power for critical small loads.", icon: "fas fa-plug" }
+  ],
+  specifications: {
+    image: "/assets/images/rentals/solar5kw-2.jpg",
+    items: [
+      { key: "System Capacity", value: "5 kWp" },
+      { key: "Daily Generation", value: "~ 20 - 25 kWh (avg)" },
+      { key: "Inverter Rating", value: "5 kVA Hybrid" },
+      { key: "Battery Bank", value: "48V (Lead Acid / Lithium Ion)" },
+      { key: "Mounting", value: "Roof / Ground Mount Structure" }
+    ]
+  },
+  compliance: [
+    { title: "Eco-Friendly", desc: "Zero emissions and silent operation tailored for green initiatives.", icon: "fas fa-leaf" },
+    { title: "Installation", desc: "Technical team handles complete installation and commissioning.", icon: "fas fa-tools" },
+    { title: "Monitoring", desc: "Optional remote monitoring to track system performance and savings.", icon: "fas fa-chart-line" },
+    { title: "Warranty", desc: "Full maintenance support and replacement of faulty components.", icon: "fas fa-shield-alt" }
+  ],
+  cta: {
+    heading: "Switch to Green Energy",
+    subtext: "Rent a 5kW Solar Power Kit and reduce your carbon footprint today.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Our 5kW Solar Power Kit is a complete, ready-to-deploy renewable energy 
+    solution tailored for off-grid sites, construction cabins, and backup 
+    power requirements. It reduces reliance on diesel generators and cuts 
+    fuel costs significantly.
+  </p>
+  <p>
+    Designed for ease of installation and transport, this kit provides 
+    reliable electricity with minimal maintenance, supporting your 
+    sustainability goals.
+  </p>
+</RentalDetailLayout>

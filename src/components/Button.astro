@@ -1,0 +1,23 @@
+---
+interface Props {
+  text: string;
+  link: string;
+  variant?: "primary" | "secondary" | "outline-primary" | "outline-dark" | "light";
+  size?: "sm" | "md" | "lg";
+  className?: string;
+}
+
+const { 
+  text, 
+  link, 
+  variant = "primary", 
+  size = "md",
+  className = ""
+} = Astro.props;
+
+// Determine class names based on props
+const btnClass = `btn btn-${variant} ${size !== 'md' ? `btn-${size}` : ''} ${className}`.trim();
+---
+<a href={link} class={btnClass}>
+  {text}
+</a>

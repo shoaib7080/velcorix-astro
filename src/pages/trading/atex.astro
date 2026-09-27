@@ -1,0 +1,77 @@
+---
+import RentalDetailLayout from '../../layouts/RentalDetailLayout.astro';
+
+const pageData = {
+  metaTitle: "ATEX Products - Velcorix Trading",
+  metaDesc: "Explosion-proof electrical equipment, ATEX transformers, plugs, sockets, enclosures, and lighting for hazardous areas in UAE.",
+  header: {
+    title: "ATEX Products",
+    subtitle: "ATEX & IECEx Certified Electrical & Cable Systems",
+    bgImage: "/assets/images/trading/atex1.png"
+  },
+  intro: {
+    image: "/assets/images/trading/atex1.png",
+    imageAlt: "ATEX Products",
+    heading: "Explosion-Proof Hazardous Area Equipment"
+  },
+  products: [
+    { name: "Socket Male & Female 4 Pin", image: "/assets/images/products/ATEX/socket-male-female-4-pin.jpg", desc: "Heavy-duty explosion-proof ATEX 4-pin male and female power plug & socket." },
+    { name: "Cable Tie 300MM (Orange, White, Blue, Green & Black)", image: "/assets/images/products/ATEX/cable.jpeg", desc: "Heavy-duty colored nylon cable ties 300mm." },
+    { name: "Single Phase Electric Cable 1.5MM 2 Core (Black)", image: "/assets/images/products/ATEX/single-phase-electric-cable-1-5mm-2-core-black.jpg", desc: "Heavy-duty black 1.5mm² 2-core flexible power cable." },
+    { name: "Electrical 1.5mm 3 Core (Black)", image: "/assets/images/products/ATEX/electrical-1-5mm-3-core-black.jpg", desc: "3-core 1.5mm² black industrial electrical cable." },
+    { name: "Insulation Tape (Red, Green, Black, White, Blue, Yellow)", image: "/assets/images/products/ATEX/insulation-tape.jpg", desc: "PVC electrical insulation tape rolls." },
+    { name: "SS Cable Tag Plate, 89X19X0.5MM, SS 316", image: "/assets/images/products/ATEX/ss-cable-tag-plate-89x19x0-5mm-ss-316.jpg", desc: "Stainless steel 316 embossed cable identification tag plates." },
+    { name: "Cable Tie PVC Black, 2.5X100 mm, Nylon 66", image: "/assets/images/products/ATEX/cable3.jpeg", desc: "Black nylon 66 cable ties 2.5x100mm." },
+    { name: "Cable Tie PVC Black, 3.6X150 mm, Nylon 66", image: "/assets/images/products/ATEX/cable3.jpeg", desc: "Black nylon 66 cable ties 3.6x150mm." },
+    { name: "Cable Tie PVC Black, 3.6X200 mm, Nylon 66", image: "/assets/images/products/ATEX/cable3.jpeg", desc: "Black nylon 66 cable ties 3.6x200mm." },
+    { name: "Cable Tie PVC Black, 3.6X300 mm, Nylon 66", image: "/assets/images/products/ATEX/cable2.jpeg", desc: "Black nylon 66 cable ties 3.6x300mm." },
+    { name: "SS Cable Tie PVC Coated Ball Lock Black, 4.6X100 mm, SS 316L", image: "/assets/images/products/ATEX/ss-cable-tie-pvc-coated-ball-lock-black-4-6x100-mm-ss-316l.jpg", desc: "SS 316L PVC coated ball lock cable ties 4.6x100mm." },
+    { name: "SS Cable Tie PVC Coated Ball Lock Black, 3.6X150 mm, SS 316L", image: "/assets/images/products/ATEX/ss-cable-tie-pvc-coated-ball-lock-black-4-6x100-mm-ss-316l.jpg", desc: "SS 316L PVC coated ball lock cable ties 3.6x150mm." },
+    { name: "SS Cable Tie PVC Coated Ball Lock Black, 3.6X200 mm, SS 316L", image: "/assets/images/products/ATEX/ss-cable-tie-pvc-coated-ball-lock-black-4-6x100-mm-ss-316l.jpg", desc: "SS 316L PVC coated ball lock cable ties 3.6x200mm." },
+    { name: "SS Cable Tie PVC Coated Ball Lock Black, 4.6X300 mm, SS 316L", image: "/assets/images/products/ATEX/ss-cable-tie-pvc-coated-ball-lock-black-4-6x100-mm-ss-316l.jpg", desc: "SS 316L PVC coated ball lock cable ties 4.6x300mm." },
+    { name: "SS Cable Tie PVC Coated Ball Lock Black, 4.6X450 mm, SS 316L", image: "/assets/images/products/ATEX/ss-cable-tie-pvc-coated-ball-lock-black-4-6x100-mm-ss-316l.jpg", desc: "SS 316L PVC coated ball lock cable ties 4.6x450mm." },
+    { name: "Terminal Header Weidmuller SCHT 55, SCHT 5S", image: "/assets/images/products/ATEX/terminal-header-weidmuller-scht-55-scht-5s.jpg", desc: "Weidmuller SCHT group markers and header tags." }
+  ],
+  offerings: [
+    { title: "Portable Transformers", desc: "Ex-d step-down site transformers for Zone 1 & Zone 2.", icon: "fas fa-circle" },
+    { title: "Plugs & Sockets", desc: "Heavy-duty interlocked explosion-proof sockets and plugs.", icon: "fas fa-circle" },
+    { title: "Ex Lighting Fittings", desc: "High-lumen LED floodlights, hand lamps, and emergency lights.", icon: "fas fa-circle" },
+    { title: "Enclosures & Glands", desc: "GRP/SS Ex-e junction boxes and certified cable glands.", icon: "fas fa-circle" }
+  ],
+  applications: [
+    { title: "Chemical Refineries", desc: "Explosion-proof lighting and power distribution in Zone 1.", icon: "fas fa-industry" },
+    { title: "Offshore Rigs", desc: "Corrosion-resistant ATEX electrical fittings for marine decks.", icon: "fas fa-anchor" },
+    { title: "Gas Plants", desc: "Hazardous area switches, isolators, and control stations.", icon: "fas fa-fire" },
+    { title: "Tank Cleaning", desc: "Portable ATEX 24V inspection lighting for confined space work.", icon: "fas fa-shield-alt" }
+  ],
+  specifications: {
+    image: "/assets/images/trading/atex1.png",
+    items: [
+      { key: "ATEX Marking", value: "II 2 G Ex db eb IIC T4...T6 Gb / II 2 D Ex tb IIIC" },
+      { key: "Ingress Protection", value: "IP66 / IP67 / IP68" },
+      { key: "Voltage Ratings", value: "24V, 110V, 230V, 400V (50/60Hz)" },
+      { key: "Enclosure Material", value: "Marine Grade Aluminum, GRP, 316L Stainless Steel" }
+    ]
+  },
+  compliance: [
+    { title: "ATEX & IECEx Certified", desc: "Complete certification documentation included with every unit.", icon: "fas fa-certificate" },
+    { title: "Zone 1 & 2 Approved", desc: "Compliant with international explosion protection standards.", icon: "fas fa-shield-alt" },
+    { title: "Pre-Inspected", desc: "Factory tested for gas tight seals and thermal performance.", icon: "fas fa-clipboard-check" },
+    { title: "Technical Consultancy", desc: "Expert assistance in selecting correct Ex protection types.", icon: "fas fa-headset" }
+  ],
+  cta: {
+    heading: "Source Certified ATEX Equipment",
+    subtext: "Contact our technical team for hazardous area equipment selection and quotes.",
+    buttonText: "Request a Quote",
+    buttonLink: "/contact"
+  }
+};
+---
+<RentalDetailLayout data={pageData}>
+  <p>
+    Velcorix specializes in ATEX and IECEx-certified explosion-proof electrical equipment, cables, and accessories designed for safe operation in Zone 1, Zone 2, Zone 21, and Zone 22 hazardous atmospheres across the UAE.
+  </p>
+  <p>
+    Our certified electrical lineup includes heavy-duty 4-pin male/female interlocked plugs & sockets, single/three-phase 1.5mm² black cables, SS316 embossed tag plates, UV-resistant black PVC cable ties, SS316L ball lock ties, and Weidmuller SCHT terminal headers—delivering total safety and ingress protection in gas and refinery environments.
+  </p>
+</RentalDetailLayout>
