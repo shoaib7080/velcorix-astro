@@ -1,6 +1,14 @@
 User-agent: *
 Allow: /
 
+# Block unlisted sections from search engines
+Disallow: /services
+Disallow: /services/
+Disallow: /rentals
+Disallow: /rentals/
+Disallow: /shutdown-management
+Disallow: /consultancy-advisory
+
 Sitemap: https://www.velcorix.com/sitemap.xml
 
 # Allow important assets for SEO
