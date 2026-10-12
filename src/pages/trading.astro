@@ -66,7 +66,7 @@ const generalCategories = [
   {
     title: "WELDING CONSUMABLES",
     image: "/assets/images/trading/weild1.png",
-    icon: "fas fa-fire-burner",
+    icon: "fas fa-fire",
     link: "/trading/welding-consumables",
     products: [
       "Back cup welding tig torch (Small)",
@@ -238,7 +238,7 @@ const steelCategories = [
   </section>
 
   <!-- Mechanical Consumables & Supplies Section -->
-  <section class="section-padding pb-4">
+  <section id="mechanical-consumables" class="section-padding pb-4">
     <div class="container">
       <div class="section-title text-center mb-5">
         <h2 class="fw-bold display-6" style="color: #1a284c;">MECHANICAL CONSUMABLES & SUPPLIES</h2>
@@ -262,7 +262,7 @@ const steelCategories = [
                   
                   <ul class="list-unstyled text-start mb-0">
                     {cat.products.slice(0, 5).map((product) => (
-                      <li class="mb-2 text-muted small border-bottom pb-1 text-truncate"><i class="fas fa-check text-primary me-2 opacity-50"></i> {product}</li>
+                      <li class="mb-2 text-muted small border-bottom pb-1 text-truncate d-flex align-items-center"><span class="bullet-dot me-2 opacity-50"></span> {product}</li>
                     ))}
                     {cat.products.length > 5 && (
                       <li class="mb-2 text-primary small fw-bold text-center pt-2">+ {cat.products.length - 5} more...</li>
@@ -278,7 +278,7 @@ const steelCategories = [
   </section>
 
   <!-- Industrial Equipment Trading Section -->
-  <section class="section-padding bg-light pb-4">
+  <section id="industrial-equipment" class="section-padding bg-light pb-4">
     <div class="container">
       <div class="section-title text-center mb-5">
         <h2 class="fw-bold display-6" style="color: #1a284c;">INDUSTRIAL EQUIPMENT TRADING</h2>
@@ -292,7 +292,7 @@ const steelCategories = [
               <div class="trading-category-card h-100 shadow-sm bg-white rounded overflow-hidden">
                 <div class="card-img-container position-relative d-flex align-items-center justify-content-center bg-white" style="height: 220px; padding: 1.25rem;">
                   <img src={cat.image} alt={cat.title} class="img-fluid" style="max-height: 100%; max-width: 100%; object-fit: contain; filter: brightness(1.02) contrast(1.02);" onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';" />
-                  <div class="icon-badge text-white position-absolute d-flex align-items-center justify-content-center rounded-circle shadow" style="background-color: #ea8223;">
+                  <div class="icon-badge text-white position-absolute d-flex align-items-center justify-content-center rounded-circle shadow" style="background-color: #c7a14a;">
                     <i class={cat.icon}></i>
                   </div>
                 </div>
@@ -302,7 +302,7 @@ const steelCategories = [
                   
                   <ul class="list-unstyled text-start mb-0">
                     {cat.products.slice(0, 5).map((product) => (
-                      <li class="mb-2 text-muted small border-bottom pb-1 text-truncate"><i class="fas fa-check text-primary me-2 opacity-75"></i> {product}</li>
+                      <li class="mb-2 text-muted small border-bottom pb-1 text-truncate d-flex align-items-center"><span class="bullet-dot me-2 opacity-50"></span> {product}</li>
                     ))}
                     {cat.products.length > 5 && (
                       <li class="mb-2 text-primary small fw-bold text-center pt-2">+ {cat.products.length - 5} more...</li>
@@ -318,7 +318,7 @@ const steelCategories = [
   </section>
 
   <!-- Steel & Metal Products Section (LAST) -->
-  <section class="section-padding bg-light">
+  <section id="steel-metal-products" class="section-padding bg-light">
     <div class="container">
       <div class="section-title text-center mb-5">
         <h2 class="fw-bold display-6" style="color: #1a284c;">STEEL & METAL PRODUCTS</h2>
@@ -342,7 +342,7 @@ const steelCategories = [
                   
                   <ul class="list-unstyled text-start mb-0">
                     {cat.products.slice(0, 5).map((product) => (
-                      <li class="mb-2 text-muted small border-bottom pb-1 text-truncate"><i class="fas fa-check text-primary me-2 opacity-75"></i> {product}</li>
+                      <li class="mb-2 text-muted small border-bottom pb-1 text-truncate d-flex align-items-center"><span class="bullet-dot me-2 opacity-50"></span> {product}</li>
                     ))}
                     {cat.products.length > 5 && (
                       <li class="mb-2 text-primary small fw-bold text-center pt-2">+ {cat.products.length - 5} more...</li>
@@ -363,9 +363,34 @@ const steelCategories = [
     buttonText="Contact Us" 
     buttonLink="/contact" 
   />
+  <script is:inline>
+    // Smooth scroll handler for anchor links on page load or hash change
+    function scrollToHash() {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+          setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 120);
+        }
+      }
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', scrollToHash);
+    } else {
+      scrollToHash();
+    }
+    window.addEventListener('hashchange', scrollToHash);
+  </script>
 </BaseLayout>
 
 <style>
+  #mechanical-consumables,
+  #industrial-equipment,
+  #steel-metal-products {
+    scroll-margin-top: 85px;
+  }
   .trading-category-card {
     transition: all 0.3s ease;
     border: 1px solid #eee;
@@ -373,7 +398,6 @@ const steelCategories = [
   .trading-category-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 1rem 3rem rgba(0,0,0,.15)!important;
-    border-color: #ea8223;
   }
   .card-img-container {
     border-bottom: 3px solid #ea8223;

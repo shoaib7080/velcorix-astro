@@ -67,6 +67,34 @@ h6 {
   color: var(--accent-color) !important; /* Revised to Orange */
 }
 
+/* Dropdown Menu & Items */
+.dropdown-menu {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 8px 0;
+}
+
+.dropdown-item {
+  color: var(--text-color);
+  padding: 8px 20px;
+  font-size: 0.9rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: var(--accent-color);
+  background-color: var(--bg-light);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--accent-color) !important;
+  background-color: var(--bg-light) !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
 .btn-primary {
   background-color: var(--accent-color); /* Revised to Orange */
   border-color: var(--accent-color);
@@ -96,12 +124,12 @@ h6 {
 
 .swiper-button-next,
 .swiper-button-prev {
-  color: var(--primary-color);
+  color: white;
   opacity: 0.75;
 }
 
 /* Hero responsive image layout to avoid CLS */
-.swiper-slide {
+.hero-slider .swiper-slide {
   position: relative;
   min-height: 60vh;
   overflow: hidden;
@@ -751,4 +779,25 @@ footer ul li a:hover {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Clean Minimal Bullet Dots */
+.bullet-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.bullet-dot-lg {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 7px;
 }

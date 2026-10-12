@@ -57,6 +57,31 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.velcorix.com/trading/generators</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/trading/lifting-handling</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/trading/fluid-handling</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/trading/site-support</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.velcorix.com/trading/container-materials</loc>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Legal -->
   <url>
     <loc>https://www.velcorix.com/privacy-policy</loc>

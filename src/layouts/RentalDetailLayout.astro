@@ -22,7 +22,7 @@ const applications = data?.applications || [];
 const specifications = data?.specifications || null;
 const compliance = data?.compliance || [];
 ---
-<BaseLayout title={metaTitle} description={metaDesc}>
+<BaseLayout title={metaTitle} description={metaDesc} image={introImg}>
     <!-- Header -->
     <PageHeader 
       title={headerTitle} 
@@ -99,7 +99,7 @@ const compliance = data?.compliance || [];
             {offerings.map((offering: any) => (
               <div class="col-md-6">
                 <div class="d-flex align-items-start">
-                  <i class={`${offering.icon && offering.icon !== 'fas fa-circle' ? offering.icon : 'fas fa-check-circle'} mt-1 me-3`} style="font-size: 1.1rem; color: var(--accent-color, #c7a14a);"></i>
+                  <i class={`${offering.icon && !offering.icon.includes('check') ? offering.icon : 'fas fa-shield-alt'} mt-1 me-3`} style="font-size: 1.1rem; color: var(--accent-color, #c7a14a);"></i>
                   <div>
                     <h5 class="fw-bold mb-1" style="color: var(--primary-color, #0b2a3c);">{offering.title}</h5>
                     <p class="text-muted mb-0">{offering.desc}</p>
@@ -179,7 +179,7 @@ const compliance = data?.compliance || [];
             {compliance.map((comp: any) => (
               <div class="col-md-3">
                  <div class="bg-white p-3 rounded shadow-sm h-100 text-center border">
-                    <i class={`${comp.icon || 'fas fa-check'} mb-3 fa-2x`} style="color: var(--accent-color, #c7a14a);"></i>
+                    <i class={`${comp.icon && !comp.icon.includes('check') ? comp.icon : 'fas fa-certificate'} mb-3 fa-2x`} style="color: var(--accent-color, #c7a14a);"></i>
                     <h6 class="fw-bold" style="color: var(--primary-color, #0b2a3c);">{comp.title}</h6>
                     <p class="small text-muted mb-0">{comp.desc}</p>
                  </div>

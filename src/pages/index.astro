@@ -1,51 +1,149 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaSection from '../components/CtaSection.astro';
+
+const tradingCategories = [
+  {
+    id: "mechanical-consumables",
+    title: "Mechanical Consumables & Supplies",
+    subtitle: "Hardware, PPE, Stationery & Welding",
+    desc: "Quality industrial consumables, abrasives, certified personal protective equipment, welding torches, and essential site stationery.",
+    image: "/assets/images/trading/hardware1.png",
+    icon: "fas fa-tools",
+    badge: "Consumables & Tools",
+    highlights: ["Hardware & Tools", "Welding Supplies", "PPE Safety Gear", "Stationery Essentials"],
+    link: "/trading#mechanical-consumables"
+  },
+  {
+    id: "industrial-equipment",
+    title: "Industrial Equipment Trading",
+    subtitle: "Heavy Machinery & ATEX Systems",
+    desc: "Certified ATEX explosion-proof systems, diesel power generators, lifting hoists, hydro jetting pumps, and H120 fire & blast barriers.",
+    image: "/assets/images/trading/atex1.png",
+    icon: "fas fa-industry",
+    badge: "Certified Machinery",
+    highlights: ["ATEX Hazardous Area", "Silent DG Generators", "Lifting & Winches", "H120 Blast Doors"],
+    link: "/trading#industrial-equipment"
+  },
+  {
+    id: "steel-metal-products",
+    title: "Steel & Metal Products",
+    subtitle: "Structural Sections & Plates",
+    desc: "Mill-certified structural steel beams, channels, angles, high-yield mild steel plates, anti-slip chequered sheets, and floor gratings.",
+    image: "/assets/images/trading/steel1.png",
+    icon: "fas fa-cubes",
+    badge: "Structural Metals",
+    highlights: ["UB, UC & IPE Beams", "PFC & UPN Channels", "MS & Chequered Plates", "Electro-Forged Gratings"],
+    link: "/trading#steel-metal-products"
+  }
+];
+
+const mostTradedItems = [
+  {
+    name: "WD-40 Multi-Use Lubricant",
+    category: "Hardware",
+    image: "/assets/images/trading/hardware1.png",
+    link: "/trading/hardware",
+    desc: "Anti-rust lubricant and moisture displacer spray"
+  },
+  {
+    name: "E7018 Welding Electrodes 3.2mm",
+    category: "Welding",
+    image: "/assets/images/products/WEILDING/weildingrod.avif",
+    link: "/trading/welding-consumables",
+    desc: "Low-hydrogen high-yield structural welding rods"
+  },
+  {
+    name: "Personal Gas Monitor",
+    category: "PPE Safety",
+    image: "/assets/images/products/PPE/personal-gas-monitor.jpg",
+    link: "/trading/ppe",
+    desc: "Multi-gas detector for hazardous environments"
+  },
+  {
+    name: "S3 Steel-Toe Safety Boots",
+    category: "PPE Safety",
+    image: "/assets/images/products/PPE/safety-shoes.webp",
+    link: "/trading/ppe",
+    desc: "Puncture & impact-resistant S3 work boots"
+  },
+  {
+    name: "TIG Argon Torch Assembly",
+    category: "Welding",
+    image: "/assets/images/products/WEILDING/tigtorch.webp",
+    link: "/trading/welding-consumables",
+    desc: "Lincoln & ESAB compatible precision torch"
+  },
+  {
+    name: "ATEX 4-Pin Plug & Socket",
+    category: "ATEX Equipment",
+    image: "/assets/images/products/ATEX/socket-male-female-4-pin.jpg",
+    link: "/trading/atex",
+    desc: "Explosion-proof hazardous area connectors"
+  },
+  {
+    name: "SS 316L Ball-Lock Cable Ties",
+    category: "ATEX Supplies",
+    image: "/assets/images/products/ATEX/ss-cable-tie-pvc-coated-ball-lock-black-4-6x100-mm-ss-316l.jpg",
+    link: "/trading/atex",
+    desc: "Marine-grade PVC coated stainless steel ties"
+  },
+  {
+    name: "Structural Steel Beams (UB / UC)",
+    category: "Structural Steel",
+    image: "/assets/images/products/STEEL/beams.jpeg",
+    link: "/trading/structural-steel",
+    desc: "Mill-certified heavy structural frame sections"
+  },
+  {
+    name: "Chequered Floor Plates",
+    category: "Structural Steel",
+    image: "/assets/images/products/STEEL/chequered-plates.jpeg",
+    link: "/trading/structural-steel",
+    desc: "Anti-slip tread plates for platforms & walkways"
+  },
+  {
+    name: "Face Shield Impact Guard",
+    category: "PPE Safety",
+    image: "/assets/images/products/PPE/face-shield-guard.jpg",
+    link: "/trading/ppe",
+    desc: "Polycarbonate impact visor with ratchet headgear"
+  },
+  {
+    name: "Silent Diesel Generator Sets",
+    category: "Equipment",
+    image: "/assets/images/other/10kw-diesel-power-generator.jpg",
+    link: "/trading/generators",
+    desc: "Acoustic soundproof prime site power units"
+  },
+  {
+    name: "H120 Fire & Blast Doors",
+    category: "Marine & Offshore",
+    image: "/assets/images/products/H120/door.jpeg",
+    link: "/trading/h120-doors-windows",
+    desc: "120-min hydrocarbon fire & blast barrier doors"
+  }
+];
 ---
 <BaseLayout title="Velcorix - Mechanical Trading & Consultancy" description="Velcorix is a premier mechanical trading and consultancy firm in UAE, providing expert oil & gas services, industrial equipment rentals, shutdown management, and EPC advisory.">
   <!-- Hero Slider Section -->
   <section class="hero-section">
     <div class="swiper hero-slider">
       <div class="swiper-wrapper">
+        <!-- Slide 1 (LCP - eager) -->
         <div class="swiper-slide">
-          <picture class="hero-picture">
-            <source
-              type="image/avif"
-              srcset="
-                /assets/images/hero/optimized/DSC_2307-800.avif   800w,
-                /assets/images/hero/optimized/DSC_2307-1200.avif 1200w,
-                /assets/images/hero/optimized/DSC_2307-1920.avif 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                /assets/images/hero/optimized/DSC_2307-800.webp   800w,
-                /assets/images/hero/optimized/DSC_2307-1200.webp 1200w,
-                /assets/images/hero/optimized/DSC_2307-1920.webp 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-            />
-            <img
-              class="hero-img"
-              src="/assets/images/hero/optimized/DSC_2307-1200.jpg"
-              srcset="
-                /assets/images/hero/optimized/DSC_2307-800.jpg   800w,
-                /assets/images/hero/optimized/DSC_2307-1200.jpg 1200w,
-                /assets/images/hero/optimized/DSC_2307-1920.jpg 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-              alt="A Partner You Can Rely On"
-              width="1920"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <img
+            class="hero-img"
+            src="/assets/images/hero/hero-img-1.webp"
+            alt="A Partner You Can Rely On"
+            width="1920"
+            height="900"
+            loading="eager"
+            decoding="async"
+          />
           <div class="hero-overlay"></div>
           <div class="container hero-content">
-            <h2 class="hero-title text-white">A Partner You Can Rely On</h2>
+            <h1 class="hero-title text-white">A Partner You Can Rely On</h1>
             <p class="hero-subtitle">
               Responsive, compliant, and quality-driven mechanical equipment trading.
             </p>
@@ -53,48 +151,22 @@ import CtaSection from '../components/CtaSection.astro';
           </div>
         </div>
 
-        <!-- Slide 1 (LCP - eager + preload) -->
+        <!-- Slide 2 -->
         <div class="swiper-slide">
-          <picture class="hero-picture">
-            <source
-              type="image/avif"
-              srcset="
-                /assets/images/hero/optimized/DSC_2319-800.avif   800w,
-                /assets/images/hero/optimized/DSC_2319-1200.avif 1200w,
-                /assets/images/hero/optimized/DSC_2319-1920.avif 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                /assets/images/hero/optimized/DSC_2319-800.webp   800w,
-                /assets/images/hero/optimized/DSC_2319-1200.webp 1200w,
-                /assets/images/hero/optimized/DSC_2319-1920.webp 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-            />
-            <img
-              class="hero-img"
-              src="/assets/images/hero/optimized/DSC_2319-1200.jpg"
-              srcset="
-                /assets/images/hero/optimized/DSC_2319-800.jpg   800w,
-                /assets/images/hero/optimized/DSC_2319-1200.jpg 1200w,
-                /assets/images/hero/optimized/DSC_2319-1920.jpg 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-              alt="End-to-End Oil & Gas Consultancy Services"
-              width="1920"
-              height="900"
-              loading="eager"
-              decoding="async"
-            />
-          </picture>
+          <img
+            class="hero-img"
+            src="/assets/images/hero/hero-img-2.webp"
+            alt="Comprehensive Mechanical Equipment Supply"
+            width="1920"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="hero-overlay"></div>
           <div class="container hero-content">
-            <h1 class="hero-title">
+            <h2 class="hero-title text-white">
               Comprehensive Mechanical Equipment Supply
-            </h1>
+            </h2>
             <p class="hero-subtitle">
               Sourcing top-tier hardware, PPE, and structural steel for industrial projects.
             </p>
@@ -102,43 +174,17 @@ import CtaSection from '../components/CtaSection.astro';
           </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- Slide 3 -->
         <div class="swiper-slide">
-          <picture class="hero-picture">
-            <source
-              type="image/avif"
-              srcset="
-                /assets/images/hero/optimized/DSC_2311-800.avif   800w,
-                /assets/images/hero/optimized/DSC_2311-1200.avif 1200w,
-                /assets/images/hero/optimized/DSC_2311-1920.avif 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-            />
-            <source
-              type="image/webp"
-              srcset="
-                /assets/images/hero/optimized/DSC_2311-800.webp   800w,
-                /assets/images/hero/optimized/DSC_2311-1200.webp 1200w,
-                /assets/images/hero/optimized/DSC_2311-1920.webp 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-            />
-            <img
-              class="hero-img"
-              src="/assets/images/hero/optimized/DSC_2311-1200.jpg"
-              srcset="
-                /assets/images/hero/optimized/DSC_2311-800.jpg   800w,
-                /assets/images/hero/optimized/DSC_2311-1200.jpg 1200w,
-                /assets/images/hero/optimized/DSC_2311-1920.jpg 1920w
-              "
-              sizes="(max-width: 768px) 100vw, 1200px"
-              alt="Reliable Equipment & Tool Rentals"
-              width="1920"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            />
-          </picture>
+          <img
+            class="hero-img"
+            src="/assets/images/hero/hero-img-3.webp"
+            alt="Reliable Consumables & ATEX Products for Critical Operations"
+            width="1920"
+            height="900"
+            loading="lazy"
+            decoding="async"
+          />
           <div class="hero-overlay"></div>
           <div class="container hero-content">
             <h2 class="hero-title text-white">
@@ -166,13 +212,13 @@ import CtaSection from '../components/CtaSection.astro';
             <source
               type="image/webp"
               srcset="
-                /assets/images/hero/optimized/DSC_2345-800.webp   800w,
-                /assets/images/hero/optimized/DSC_2345-1200.webp 1200w
+                /assets/images/other/image.webp   800w,
+                /assets/images/other/image.webp 1200w
               "
               sizes="(max-width: 768px) 100vw, 600px"
             />
             <img
-              src="/assets/images/hero/optimized/DSC_2345-800.jpg"
+              src="/assets/images/other/image.webp"
               alt="Premier Mechanical Services in UAE"
               class="img-fluid rounded shadow"
               width="600"
@@ -183,9 +229,9 @@ import CtaSection from '../components/CtaSection.astro';
           </picture>
         </div>
         <div class="col-lg-6">
-          <h4 class="text-uppercase text-secondary mb-2">
+          <h2 class="text-uppercase text-secondary mb-2 h4">
             Premier Mechanical Equipment Trading in UAE
-          </h4>
+          </h2>
           <p class="mb-4">
             Velcorix is a leading mechanical equipment trading company
             serving the oil and gas, energy, and industrial sectors. We
@@ -194,14 +240,14 @@ import CtaSection from '../components/CtaSection.astro';
             UAE.
           </p>
           <ul class="list-unstyled mb-4">
-            <li class="mb-2">
-              <i class="fas fa-check-circle text-primary me-2"></i> Quality Assurance
+            <li class="mb-2 d-flex align-items-center">
+              <span class="bullet-dot me-2"></span> Quality Assurance
             </li>
-            <li class="mb-2">
-              <i class="fas fa-check-circle text-primary me-2"></i> Expert Engineering Team
+            <li class="mb-2 d-flex align-items-center">
+              <span class="bullet-dot me-2"></span> Expert Engineering Team
             </li>
-            <li class="mb-2">
-              <i class="fas fa-check-circle text-primary me-2"></i> Timely Delivery
+            <li class="mb-2 d-flex align-items-center">
+              <span class="bullet-dot me-2"></span> Timely Delivery
             </li>
           </ul>
           <a href="/about" class="btn btn-outline-dark">Read More</a>
@@ -210,101 +256,112 @@ import CtaSection from '../components/CtaSection.astro';
     </div>
   </section>
 
-  <!-- Our Trading Categories -->
-  <section class="section-padding">
+  <!-- Trading Categories Section -->
+  <section class="section-padding trading-categories-section">
     <div class="container">
-      <div class="section-title">
-        <h2>Our Trading Catalogue</h2>
-        <p>Comprehensive mechanical equipment and supplies</p>
+      <div class="section-title text-center mb-5">
+        <h2>Trading Categories</h2>
+        <p>Three specialized supply divisions engineered for industrial operations across the UAE</p>
       </div>
+
       <div class="row g-4 justify-content-center">
-        <!-- Hardware -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="/trading/hardware" class="text-decoration-none text-dark d-block h-100">
-            <div class="service-card h-100 text-center border-0 shadow-sm" style="border: 1px solid rgba(0,0,0,0.05) !important;">
-              <div class="service-icon mb-3">
-                <i class="fas fa-tools"></i>
+        {tradingCategories.map((category) => (
+          <div class="col-lg-4 col-md-6">
+            <a href={category.link} class="text-decoration-none text-dark d-block h-100">
+              <div class="category-showcase-card h-100">
+                <div class="category-card-media position-relative">
+                  <img
+                    src={category.image}
+                    alt={category.title}
+                    class="img-fluid category-card-img"
+                    onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';"
+                    loading="lazy"
+                  />
+                  <span class="category-card-badge">
+                    <i class={`${category.icon} me-1`}></i> {category.badge}
+                  </span>
+                </div>
+                <div class="category-card-content">
+                  <h3 class="category-card-title">{category.title}</h3>
+                  <p class="category-card-desc">{category.desc}</p>
+                  
+                  <div class="category-tags">
+                    {category.highlights.map((item) => (
+                      <span class="category-tag-pill">{item}</span>
+                    ))}
+                  </div>
+
+                  <div class="category-card-footer mt-auto pt-3">
+                    <span class="category-card-link">
+                      Explore Division <i class="fas fa-arrow-right ms-2"></i>
+                    </span>
+                  </div>
+                </div>
               </div>
-              <h5 class="fw-bold mb-2 text-primary">Hardware</h5>
-              <p class="text-muted small mb-0">Tools, abrasives, and general hardware supplies.</p>
-            </div>
-          </a>
-        </div>
-        <!-- Stationery -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="/trading/stationery" class="text-decoration-none text-dark d-block h-100">
-            <div class="service-card h-100 text-center border-0 shadow-sm" style="border: 1px solid rgba(0,0,0,0.05) !important;">
-              <div class="service-icon mb-3">
-                <i class="fas fa-paperclip"></i>
-              </div>
-              <h5 class="fw-bold mb-2 text-primary">Stationery</h5>
-              <p class="text-muted small mb-0">Office and industrial stationery essentials.</p>
-            </div>
-          </a>
-        </div>
-        <!-- Welding Consumables -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="/trading/welding-consumables" class="text-decoration-none text-dark d-block h-100">
-            <div class="service-card h-100 text-center border-0 shadow-sm" style="border: 1px solid rgba(0,0,0,0.05) !important;">
-              <div class="service-icon mb-3">
-                <i class="fas fa-fire-burner"></i>
-              </div>
-              <h5 class="fw-bold mb-2 text-primary">Welding Consumables</h5>
-              <p class="text-muted small mb-0">Rods, torches, and specialized welding supplies.</p>
-            </div>
-          </a>
-        </div>
-        <!-- PPE -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="/trading/ppe" class="text-decoration-none text-dark d-block h-100">
-            <div class="service-card h-100 text-center border-0 shadow-sm" style="border: 1px solid rgba(0,0,0,0.05) !important;">
-              <div class="service-icon mb-3">
-                <i class="fas fa-hard-hat"></i>
-              </div>
-              <h5 class="fw-bold mb-2 text-primary">PPE</h5>
-              <p class="text-muted small mb-0">Safety gear and personal protective equipment.</p>
-            </div>
-          </a>
-        </div>
-        <!-- Structural Steel -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="/trading/structural-steel" class="text-decoration-none text-dark d-block h-100">
-            <div class="service-card h-100 text-center border-0 shadow-sm" style="border: 1px solid rgba(0,0,0,0.05) !important;">
-              <div class="service-icon mb-3">
-                <i class="fas fa-cubes"></i>
-              </div>
-              <h5 class="fw-bold mb-2 text-primary">Structural Steel</h5>
-              <p class="text-muted small mb-0">Beams, plates, and galvanized sheets.</p>
-            </div>
-          </a>
-        </div>
-        <!-- ATEX Products -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="/trading/atex" class="text-decoration-none text-dark d-block h-100">
-            <div class="service-card h-100 text-center border-0 shadow-sm" style="border: 1px solid rgba(0,0,0,0.05) !important;">
-              <div class="service-icon mb-3">
-                <i class="fas fa-bolt"></i>
-              </div>
-              <h5 class="fw-bold mb-2 text-primary">ATEX Products</h5>
-              <p class="text-muted small mb-0">Explosion-proof and hazardous area equipment.</p>
-            </div>
-          </a>
-        </div>
-        <!-- H120 Doors & Windows -->
-        <div class="col-lg-3 col-md-4 col-sm-6">
-          <a href="/trading/h120-doors-windows" class="text-decoration-none text-dark d-block h-100">
-            <div class="service-card h-100 text-center border-0 shadow-sm" style="border: 1px solid rgba(0,0,0,0.05) !important;">
-              <div class="service-icon mb-3">
-                <i class="fas fa-door-closed"></i>
-              </div>
-              <h5 class="fw-bold mb-2 text-primary">H120 Doors & Windows</h5>
-              <p class="text-muted small mb-0">Fire-rated and blast-resistant solutions.</p>
-            </div>
-          </a>
-        </div>
+            </a>
+          </div>
+        ))}
       </div>
-      <div class="text-center mt-5">
-        <a href="/trading" class="btn btn-primary btn-lg px-5">
+    </div>
+  </section>
+
+  <!-- Our Trading Catalogue - Most Traded Items Carousel -->
+  <section class="section-padding bg-light catalogue-carousel-section">
+    <div class="container-fluid px-xl-5 px-lg-4 px-3">
+      <div class="section-title text-center mb-4">
+        <h2>Our Trading Catalogue</h2>
+        <p>Most traded items and fast-moving industrial supplies</p>
+      </div>
+
+      <div class="catalogue-carousel-wrapper">
+        <div class="catalogue-swiper-outer position-relative">
+          <div class="swiper catalogue-swiper">
+            <div class="swiper-wrapper">
+              {mostTradedItems.map((item) => (
+                <div class="swiper-slide">
+                  <a href={item.link} class="text-decoration-none d-block h-100">
+                    <div class="catalogue-item-card">
+                      <div class="item-img-box">
+                        <img
+                          src={item.image}
+                          alt={item.name}
+                          class="img-fluid"
+                          loading="lazy"
+                          onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';"
+                        />
+                      </div>
+                      <div class="item-info">
+                        <span class="item-category-tag">{item.category}</span>
+                        <h4 class="item-title" title={item.name}>{item.name}</h4>
+                        <p class="item-desc">{item.desc}</p>
+                        <div class="item-action">
+                          <span class="item-link">
+                            View Details <i class="fas fa-chevron-right ms-1"></i>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <!-- Navigation Buttons centered strictly on the card row -->
+          <button class="catalogue-nav-btn catalogue-prev" aria-label="Previous items">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="catalogue-nav-btn catalogue-next" aria-label="Next items">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Pagination directly beneath cards -->
+        <div class="catalogue-pagination text-center mt-3"></div>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="/trading" class="btn btn-primary px-4 py-2">
           <i class="fas fa-list me-2"></i> View Full Catalogue
         </a>
       </div>
@@ -326,8 +383,8 @@ import CtaSection from '../components/CtaSection.astro';
           <div class="row">
             <div class="col-md-6 mb-4">
               <div class="d-flex align-items-start">
-                <div class="me-3 text-primary">
-                  <i class="fas fa-check-circle fa-2x"></i>
+                <div class="me-3 mt-1">
+                  <span class="bullet-dot-lg"></span>
                 </div>
                 <div>
                   <h5 class="fw-bold">Proven Experience</h5>
@@ -339,8 +396,8 @@ import CtaSection from '../components/CtaSection.astro';
             </div>
             <div class="col-md-6 mb-4">
               <div class="d-flex align-items-start">
-                <div class="me-3 text-primary">
-                  <i class="fas fa-check-circle fa-2x"></i>
+                <div class="me-3 mt-1">
+                  <span class="bullet-dot-lg"></span>
                 </div>
                 <div>
                   <h5 class="fw-bold">Field-Driven</h5>
@@ -352,8 +409,8 @@ import CtaSection from '../components/CtaSection.astro';
             </div>
             <div class="col-md-6 mb-4">
               <div class="d-flex align-items-start">
-                <div class="me-3 text-primary">
-                  <i class="fas fa-check-circle fa-2x"></i>
+                <div class="me-3 mt-1">
+                  <span class="bullet-dot-lg"></span>
                 </div>
                 <div>
                   <h5 class="fw-bold">Rapid Response</h5>
@@ -365,8 +422,8 @@ import CtaSection from '../components/CtaSection.astro';
             </div>
             <div class="col-md-6 mb-4">
               <div class="d-flex align-items-start">
-                <div class="me-3 text-primary">
-                  <i class="fas fa-check-circle fa-2x"></i>
+                <div class="me-3 mt-1">
+                  <span class="bullet-dot-lg"></span>
                 </div>
                 <div>
                   <h5 class="fw-bold">Quality Equipment</h5>
@@ -378,8 +435,8 @@ import CtaSection from '../components/CtaSection.astro';
             </div>
             <div class="col-md-6 mb-4">
               <div class="d-flex align-items-start">
-                <div class="me-3 text-primary">
-                  <i class="fas fa-check-circle fa-2x"></i>
+                <div class="me-3 mt-1">
+                  <span class="bullet-dot-lg"></span>
                 </div>
                 <div>
                   <h5 class="fw-bold">Safety First</h5>
@@ -391,8 +448,8 @@ import CtaSection from '../components/CtaSection.astro';
             </div>
             <div class="col-md-6 mb-4">
               <div class="d-flex align-items-start">
-                <div class="me-3 text-primary">
-                  <i class="fas fa-check-circle fa-2x"></i>
+                <div class="me-3 mt-1">
+                  <span class="bullet-dot-lg"></span>
                 </div>
                 <div>
                   <h5 class="fw-bold">Accountability</h5>
@@ -601,7 +658,7 @@ import CtaSection from '../components/CtaSection.astro';
               <i class="fas fa-shield-alt text-primary me-2"></i>HSE-first mindset in product selection
             </li>
             <li class="mb-2">
-              <i class="fas fa-check-double text-primary me-2"></i>Certified materials and equipment
+              <i class="fas fa-certificate text-primary me-2"></i>Certified materials and equipment
             </li>
             <li class="mb-2">
               <i class="fas fa-file-contract text-primary me-2"></i>Documentation and full traceability
@@ -619,4 +676,283 @@ import CtaSection from '../components/CtaSection.astro';
     buttonText="Request a Quote" 
     buttonLink="/contact" 
   />
+
 </BaseLayout>
+
+<style>
+  /* Trading Categories Section */
+  .trading-categories-section {
+    background-color: #ffffff;
+  }
+  .category-showcase-card {
+    background: #ffffff;
+    border: 1px solid #e5e9f0;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .category-showcase-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(11, 42, 60, 0.08);
+    border-color: #cbd5e1;
+  }
+  .category-card-media {
+    height: 220px;
+    background: #f8fafc;
+    border-bottom: 1px solid #edf2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .category-card-img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  .category-showcase-card:hover .category-card-img {
+    transform: scale(1.03);
+  }
+  .category-card-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(11, 42, 60, 0.88);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(4px);
+  }
+  .category-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .category-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+  }
+  .category-card-desc {
+    font-size: 0.88rem;
+    color: #556270;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  .category-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 1rem;
+  }
+  .category-tag-pill {
+    font-size: 0.74rem;
+    background: #f1f5f9;
+    color: #334155;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid #e2e8f0;
+    font-weight: 500;
+  }
+  .category-card-footer {
+    border-top: 1px solid #f1f5f9;
+  }
+  .category-card-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 0.88rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.2s ease, transform 0.2s ease;
+  }
+  .category-showcase-card:hover .category-card-link {
+    color: #c7a14a;
+    transform: translateX(4px);
+  }
+
+  /* Our Trading Catalogue - Carousel Section */
+  .catalogue-carousel-section {
+    background-color: #f8fafc;
+    padding: 55px 0 50px 0;
+  }
+  .catalogue-carousel-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 44px;
+    position: relative;
+  }
+  .catalogue-swiper-outer {
+    position: relative;
+  }
+  .catalogue-swiper {
+    padding: 4px 2px 8px 2px;
+  }
+  :global(.catalogue-swiper .swiper-wrapper) {
+    display: flex;
+    align-items: stretch !important;
+  }
+  :global(.catalogue-swiper .swiper-slide) {
+    min-height: unset !important;
+    height: auto !important;
+    display: flex !important;
+  }
+  .catalogue-item-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0; /* Minimal, neutral border colour */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  }
+  .catalogue-item-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.05);
+    border-color: #cbd5e1; /* Minimal subtle hover border */
+  }
+  .item-img-box {
+    position: relative;
+    height: 140px;
+    min-height: 140px;
+    max-height: 140px;
+    background: #fbfcfd;
+    border-bottom: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem;
+  }
+  .item-img-box img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  .item-info {
+    padding: 0.85rem 0.95rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+  .item-category-tag {
+    font-size: 0.68rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.35rem;
+  }
+  .item-title {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 0.25rem;
+    line-height: 1.35;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.7em;
+  }
+  .item-desc {
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.35;
+    margin-bottom: 0.65rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    min-height: 2.7em;
+    flex-grow: 1;
+  }
+  .item-action {
+    margin-top: auto;
+    padding-top: 0.4rem;
+    border-top: 1px solid #f8fafc;
+  }
+  .item-link {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.15s ease;
+  }
+  .catalogue-item-card:hover .item-link {
+    color: #c7a14a;
+  }
+
+  /* Minimal Navigation Buttons centered on the card row */
+  .catalogue-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #0b2a3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 0.85rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+  }
+  .catalogue-nav-btn:hover {
+    background-color: #0b2a3c;
+    border-color: #0b2a3c;
+    color: #ffffff;
+  }
+  .catalogue-prev {
+    left: -20px;
+  }
+  .catalogue-next {
+    right: -20px;
+  }
+
+  /* Minimal Pagination Dots */
+  .catalogue-pagination {
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  :global(.catalogue-pagination .swiper-pagination-bullet) {
+    background: #cbd5e1;
+    opacity: 0.7;
+    width: 7px;
+    height: 7px;
+    margin: 0 4px;
+    transition: all 0.2s ease;
+  }
+  :global(.catalogue-pagination .swiper-pagination-bullet-active) {
+    background: #0b2a3c;
+    opacity: 1;
+    width: 18px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 768px) {
+    .catalogue-carousel-wrapper {
+      padding: 0;
+    }
+    .catalogue-nav-btn {
+      display: none;
+    }
+  }
+</style>

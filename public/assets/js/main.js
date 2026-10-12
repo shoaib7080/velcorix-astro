@@ -24,6 +24,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // Initialize Swiper for Trading Catalogue (Most Traded Items) Carousel
+  if (typeof Swiper !== "undefined" && document.querySelector(".catalogue-swiper")) {
+    const catalogueSwiper = new Swiper(".catalogue-swiper", {
+      slidesPerView: 1.25,
+      spaceBetween: 14,
+      loop: true,
+      observer: true,
+      observeParents: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      speed: 450,
+      navigation: {
+        nextEl: ".catalogue-next",
+        prevEl: ".catalogue-prev",
+      },
+      pagination: {
+        el: ".catalogue-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 14,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 16,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 16,
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 18,
+        },
+        1400: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
   // Auto-activate dropdown based on current page
   const currentPath = window.location.pathname;
   const fileName = currentPath.split("/").pop();

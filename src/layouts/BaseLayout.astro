@@ -5,21 +5,65 @@ import Footer from '../components/Footer.astro';
 interface Props {
   title?: string;
   description?: string;
+  image?: string;
+  robots?: string;
 }
 
 const {
   title = "Velcorix - Mechanical Equipment Trading UAE",
-  description = "Velcorix is a leading mechanical equipment trading company in UAE, supplying quality industrial hardware, PPE, welding consumables, structural steel, ATEX products, and more across the Middle East."
+  description = "Velcorix is a leading mechanical equipment trading company in UAE, supplying quality industrial hardware, PPE, welding consumables, structural steel, ATEX products, and more across the Middle East.",
+  image = "/assets/images/logo/velcorix-logo.png",
+  robots = "index, follow"
 } = Astro.props;
+
+const siteOrigin = Astro.site ? (typeof Astro.site === 'string' ? Astro.site : Astro.site.origin) : 'https://www.velcorix.com';
+const canonicalURL = new URL(Astro.url.pathname, siteOrigin).href;
+const ogImageURL = image.startsWith('http') ? image : new URL(image, siteOrigin).href;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Velcorix",
+  "url": "https://www.velcorix.com",
+  "logo": "https://www.velcorix.com/assets/images/logo/velcorix-logo.png",
+  "description": "Leading mechanical equipment trading company in UAE, supplying quality industrial hardware, PPE, welding consumables, structural steel, ATEX products, and more.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Dubai",
+    "addressCountry": "AE"
+  }
+};
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content={robots} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageURL} />
+    <meta property="og:site_name" content="Velcorix" />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageURL} />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Google Fonts -->
