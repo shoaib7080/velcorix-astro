@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Page Not Found (404) - Velcorix" description="The page you are looking for might have been removed, had its name changed, or is temporarily unavailable." robots="noindex, nofollow">
+  <section class="section-padding py-5 my-5 text-center">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <span class="display-1 fw-bold text-primary d-block mb-3">404</span>
+          <h2 class="fw-bold mb-3" style="color: #1a284c;">Page Not Found</h2>
+          <p class="text-muted mb-4">
+            The page you are looking for does not exist or has been moved. Explore our equipment catalogue or return to the homepage.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="/" class="btn btn-primary px-4 py-2">
+              <i class="fas fa-home me-2"></i> Go to Homepage
+            </a>
+            <a href="/trading" class="btn btn-outline-dark px-4 py-2">
+              <i class="fas fa-tools me-2"></i> Equipment Catalogue
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
