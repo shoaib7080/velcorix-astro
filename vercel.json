@@ -1,4 +1,26 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/services",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/services/:path*",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/rentals",
+      "destination": "/",
+      "permanent": false
+    },
+    {
+      "source": "/rentals/:path*",
+      "destination": "/",
+      "permanent": false
+    }
+  ]
 }

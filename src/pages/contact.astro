@@ -119,7 +119,10 @@ import Button from '../components/Button.astro';
                 </div>
                 <div>
                   <h5 class="mb-0">Email</h5>
-                  <p class="mb-0 text-muted">info@velcorix.com</p>
+                  <p class="mb-0 text-muted">
+                    <a href="mailto:info@velcorix.com" class="text-muted text-decoration-none">info@velcorix.com</a><br />
+                    <a href="mailto:sales@velcorix.com" class="text-muted text-decoration-none">sales@velcorix.com</a>
+                  </p>
                 </div>
               </div>
 
@@ -142,6 +145,14 @@ import Button from '../components/Button.astro';
       const result = document.getElementById("result");
       const submitBtn = document.getElementById("submitBtn");
 
+      // Web3Forms keys:
+      // 1. info@velcorix.com
+      // 2. sales@velcorix.com
+      const ACCESS_KEYS = [
+        "a3101cef-d9c3-4070-860a-ac480d9851c7",
+        "7bfa00e9-ce33-4062-90be-fbc8a6d91d01",
+      ];
+
       if (form) {
         form.addEventListener("submit", async function (e) {
           e.preventDefault();
@@ -159,41 +170,59 @@ import Button from '../components/Button.astro';
           }
 
           const formData = new FormData(form);
-          const object = Object.fromEntries(formData);
-          const json = JSON.stringify(object);
+          const formValues = Object.fromEntries(formData);
 
           try {
-            const response = await fetch("https://api.web3forms.com/submit", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Accept: "application/json",
-              },
-              body: json,
-            });
+            // Dispatch to both recipients in parallel
+            const requests = ACCESS_KEYS.map((key) =>
+              fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  Accept: "application/json",
+                },
+                body: JSON.stringify({
+                  ...formValues,
+                  access_key: key,
+                }),
+              }).then(async (response) => {
+                const data = await response.json().catch(() => ({}));
+                return {
+                  ok: response.status === 200 && data.success,
+                  data,
+                };
+              })
+            );
 
-            const data = await response.json();
+            const settledResults = await Promise.allSettled(requests);
 
-            if (response.status === 200 && data.success) {
+            const hasSuccess = settledResults.some(
+              (r) => r.status === "fulfilled" && r.value?.ok
+            );
+
+            if (hasSuccess) {
               if (result) {
                 result.className = "alert alert-success mt-3 py-2 text-center small";
                 result.textContent =
-                  data.message || "Thank you! Your message has been sent successfully.";
+                  "Thank you! Your message has been sent successfully.";
               }
               form.reset();
             } else {
+              const firstError = settledResults.find(
+                (r) => r.status === "fulfilled" && r.value?.data?.message
+              );
               if (result) {
                 result.className = "alert alert-danger mt-3 py-2 text-center small";
                 result.textContent =
-                  data.message ||
-                  "Something went wrong. Please try again or email us directly at info@velcorix.com.";
+                  firstError?.value?.data?.message ||
+                  "Something went wrong. Please try again or email us directly at info@velcorix.com / sales@velcorix.com.";
               }
             }
           } catch (error) {
             if (result) {
               result.className = "alert alert-danger mt-3 py-2 text-center small";
               result.textContent =
-                "Network error. Please try again or email us at info@velcorix.com.";
+                "Network error. Please try again or email us directly at info@velcorix.com / sales@velcorix.com.";
             }
           } finally {
             if (submitBtn) {
