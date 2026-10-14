@@ -7,6 +7,9 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "optimize:hero": "node scripts/optimize-hero-lcp.cjs",
+    "optimize:trading": "node scripts/optimize-trading-images.cjs",
+    "optimize:all": "node scripts/optimize-hero-lcp.cjs && node scripts/optimize-trading-images.cjs",
     "astro": "astro"
   },
   "dependencies": {

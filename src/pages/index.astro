@@ -8,7 +8,7 @@ const tradingCategories = [
     title: "Mechanical Consumables & Supplies",
     subtitle: "Hardware, PPE, Stationery & Welding",
     desc: "Quality industrial consumables, abrasives, certified personal protective equipment, welding torches, and essential site stationery.",
-    image: "/assets/images/trading/hardware1.png",
+    image: "/assets/images/trading/hardware1.webp",
     icon: "fas fa-tools",
     badge: "Consumables & Tools",
     highlights: ["Hardware & Tools", "Welding Supplies", "PPE Safety Gear", "Stationery Essentials"],
@@ -19,7 +19,7 @@ const tradingCategories = [
     title: "Industrial Equipment Trading",
     subtitle: "Heavy Machinery & ATEX Systems",
     desc: "Certified ATEX explosion-proof systems, diesel power generators, lifting hoists, hydro jetting pumps, and H120 fire & blast barriers.",
-    image: "/assets/images/trading/atex1.png",
+    image: "/assets/images/trading/atex1.webp",
     icon: "fas fa-industry",
     badge: "Certified Machinery",
     highlights: ["ATEX Hazardous Area", "Silent DG Generators", "Lifting & Winches", "H120 Blast Doors"],
@@ -30,7 +30,7 @@ const tradingCategories = [
     title: "Steel & Metal Products",
     subtitle: "Structural Sections & Plates",
     desc: "Mill-certified structural steel beams, channels, angles, high-yield mild steel plates, anti-slip chequered sheets, and floor gratings.",
-    image: "/assets/images/trading/steel1.png",
+    image: "/assets/images/trading/steel1.webp",
     icon: "fas fa-cubes",
     badge: "Structural Metals",
     highlights: ["UB, UC & IPE Beams", "PFC & UPN Channels", "MS & Chequered Plates", "Electro-Forged Gratings"],
@@ -42,7 +42,7 @@ const mostTradedItems = [
   {
     name: "WD-40 Multi-Use Lubricant",
     category: "Hardware",
-    image: "/assets/images/trading/hardware1.png",
+    image: "/assets/images/trading/hardware1.webp",
     link: "/trading/hardware",
     desc: "Anti-rust lubricant and moisture displacer spray"
   },
@@ -125,22 +125,41 @@ const mostTradedItems = [
   }
 ];
 ---
-<BaseLayout title="Velcorix - Mechanical Trading & Consultancy" description="Velcorix is a premier mechanical trading and consultancy firm in UAE, providing expert oil & gas services, industrial equipment rentals, shutdown management, and EPC advisory.">
+<BaseLayout 
+  title="Velcorix - Mechanical Trading & Consultancy" 
+  description="Velcorix is a premier mechanical trading and consultancy firm in UAE, providing expert oil & gas services, industrial equipment rentals, shutdown management, and EPC advisory."
+  preloadImage="/assets/images/hero/hero-img-1.webp"
+  preloadImageSrcset="/assets/images/hero/hero-img-1-mobile.webp 768w, /assets/images/hero/hero-img-1-tablet.webp 1200w, /assets/images/hero/hero-img-1.webp 1920w"
+  preloadImageSizes="100vw"
+>
   <!-- Hero Slider Section -->
   <section class="hero-section">
     <div class="swiper hero-slider">
       <div class="swiper-wrapper">
-        <!-- Slide 1 (LCP - eager) -->
+        <!-- Slide 1 (LCP - responsive eager) -->
         <div class="swiper-slide">
-          <img
-            class="hero-img"
-            src="/assets/images/hero/hero-img-1.webp"
-            alt="A Partner You Can Rely On"
-            width="1920"
-            height="900"
-            loading="eager"
-            decoding="async"
-          />
+          <picture class="hero-picture">
+            <source
+              media="(max-width: 768px)"
+              srcset="/assets/images/hero/hero-img-1-mobile.webp"
+              type="image/webp"
+            />
+            <source
+              media="(max-width: 1200px)"
+              srcset="/assets/images/hero/hero-img-1-tablet.webp"
+              type="image/webp"
+            />
+            <img
+              class="hero-img"
+              src="/assets/images/hero/hero-img-1.webp"
+              alt="A Partner You Can Rely On"
+              width="1920"
+              height="900"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high"
+            />
+          </picture>
           <div class="hero-overlay"></div>
           <div class="container hero-content">
             <h1 class="hero-title text-white">A Partner You Can Rely On</h1>
@@ -329,7 +348,10 @@ const mostTradedItems = [
                           src={item.image}
                           alt={item.name}
                           class="img-fluid"
+                          width="420"
+                          height="228"
                           loading="lazy"
+                          decoding="async"
                           onerror="this.onerror=null; this.src='/assets/images/logo/velcorix-logo.png';"
                         />
                       </div>

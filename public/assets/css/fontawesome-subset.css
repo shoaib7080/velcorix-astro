@@ -1,0 +1,136 @@
+/*!
+ * Font Awesome 6.0.0 Subset - Tailored for Velcorix
+ * Contains core base styles and all icons used across the website.
+ */
+
+/* Core Font Face */
+@font-face {
+  font-family: 'Font Awesome 6 Free';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2') format('woff2');
+}
+
+/* Base Styles */
+.fa,
+.fas,
+.far,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+
+.fa,
+.fas {
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+}
+
+.fab {
+  font-family: 'Font Awesome 6 Brands';
+  font-weight: 400;
+}
+
+/* Sizing Utilities */
+.fa-xs { font-size: 0.75em; }
+.fa-sm { font-size: 0.875em; }
+.fa-lg { font-size: 1.25em; line-height: 0.05em; vertical-align: -0.075em; }
+.fa-2x { font-size: 2em; }
+.fa-3x { font-size: 3em; }
+.fa-4x { font-size: 4em; }
+.fa-5x { font-size: 5em; }
+.fa-fw { text-align: center; width: 1.25em; }
+
+/* Icon Glyphs (Solid) */
+.fa-tools:before { content: "\f7d9"; }
+.fa-paperclip:before { content: "\f0c6"; }
+.fa-fire:before { content: "\f06d"; }
+.fa-hard-hat:before { content: "\f807"; }
+.fa-bolt:before { content: "\f0e7"; }
+.fa-weight-hanging:before { content: "\f5cd"; }
+.fa-water:before { content: "\f773"; }
+.fa-campground:before { content: "\f6bb"; }
+.fa-boxes:before { content: "\f468"; }
+.fa-cubes:before { content: "\f1b3"; }
+.fa-circle:before { content: "\f111"; }
+.fa-oil-can:before { content: "\f613"; }
+.fa-drum:before { content: "\f569"; }
+.fa-gavel:before { content: "\f0e3"; }
+.fa-wrench:before { content: "\f0ad"; }
+.fa-certificate:before { content: "\f0a3"; }
+.fa-box:before { content: "\f466"; }
+.fa-headset:before { content: "\f590"; }
+.fa-truck:before { content: "\f0d1"; }
+.fa-building:before { content: "\f1ad"; }
+.fa-road:before { content: "\f018"; }
+.fa-ship:before { content: "\f21a"; }
+.fa-shield-alt:before { content: "\f3ed"; }
+.fa-cut:before { content: "\f0c4"; }
+.fa-file-contract:before { content: "\f56c"; }
+.fa-graduation-cap:before { content: "\f19d"; }
+.fa-leaf:before { content: "\f06c"; }
+.fa-truck-moving:before { content: "\f4df"; }
+.fa-clock:before { content: "\f017"; }
+.fa-fan:before { content: "\f863"; }
+.fa-box-open:before { content: "\f49e"; }
+.fa-anchor:before { content: "\f13d"; }
+.fa-arrow-up:before { content: "\f062"; }
+.fa-arrow-right:before { content: "\f061"; }
+.fa-arrow-left:before { content: "\f060"; }
+.fa-ruler-combined:before { content: "\f546"; }
+.fa-check-circle:before { content: "\f058"; }
+.fa-check:before { content: "\f00c"; }
+.fa-chevron-right:before { content: "\f054"; }
+.fa-chevron-left:before { content: "\f053"; }
+.fa-chevron-up:before { content: "\f077"; }
+.fa-chevron-down:before { content: "\f078"; }
+.fa-chevron-circle-right:before { content: "\f138"; }
+.fa-list:before { content: "\f03a"; }
+.fa-map-marker-alt:before { content: "\f3c5"; }
+.fa-phone:before { content: "\f095"; }
+.fa-phone-alt:before { content: "\f879"; }
+.fa-envelope:before { content: "\f0e0"; }
+.fa-industry:before { content: "\f275"; }
+.fa-cogs:before { content: "\f085"; }
+.fa-cog:before { content: "\f013"; }
+.fa-quote-left:before { content: "\f10d"; }
+.fa-quote-right:before { content: "\f10e"; }
+.fa-info-circle:before { content: "\f05a"; }
+.fa-exclamation-triangle:before { content: "\f071"; }
+.fa-award:before { content: "\f559"; }
+.fa-handshake:before { content: "\f2b5"; }
+.fa-chart-line:before { content: "\f201"; }
+.fa-map:before { content: "\f279"; }
+.fa-search:before { content: "\f002"; }
+.fa-times:before { content: "\f00d"; }
+.fa-bars:before { content: "\f0c9"; }
+.fa-plug:before { content: "\f1e6"; }
+.fa-gas-pump:before { content: "\f52f"; }
+.fa-wind:before { content: "\f72e"; }
+.fa-warehouse:before { content: "\f494"; }
+.fa-tachometer-alt:before { content: "\f3fd"; }
+.fa-compress-arrows-alt:before { content: "\f78c"; }
+
+/* Icon Glyphs (Brands) */
+.fa-linkedin:before { content: "\f08c"; }
+.fa-linkedin-in:before { content: "\f0e1"; }
+.fa-facebook:before { content: "\f09a"; }
+.fa-facebook-f:before { content: "\f39e"; }
+.fa-instagram:before { content: "\f16d"; }
+.fa-twitter:before { content: "\f099"; }
+.fa-whatsapp:before { content: "\f232"; }
+.fa-youtube:before { content: "\f167"; }
